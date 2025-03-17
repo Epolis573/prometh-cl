@@ -1,0 +1,860 @@
+{
+    "about": {
+      "_order": [
+        "generaltextareastub_gbul0",
+        "generaltextareastub_06yp8",
+        "generaltextareastub_478yj",
+        "generaltextareastub_gmsa6",
+        "generaltextareastub_j5hdd",
+        "generaltextareastub_556pq",
+        "generaltextareastub_0bwdh",
+        "generaltextareastub_nusco",
+        "generaltextareastub_8kb2r",
+        "generaltextareastub_ety6f",
+        "generaltextareastub_tax31",
+        "generaltextareastub_rc7nd",
+        "generaltextareastub_3dfb8"
+      ],
+      "_temp": "About",
+      "generaltextareastub_06yp8": {
+        "_title": "Header2",
+        "_type": "generaltextareastub",
+        "description": "at_hr1",
+        "key": "text2",
+        "value": "Ever since, we’ve been asked two questions. \u003Cb\u003EWhy now?\u003C/b\u003E And \u003Cb\u003Ewhat makes us think we can do it?\u003C/b\u003E"
+      },
+      "generaltextareastub_0bwdh": {
+        "_title": "Subhead3",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text7",
+        "value": "Our answer here is also simple - We know the task is great. But the technology exists."
+      },
+      "generaltextareastub_3dfb8": {
+        "_title": "Closing",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text13",
+        "value": "We invite you to imagine this future, and if you find it as inspiring as we do, we hope you’ll join us."
+      },
+      "generaltextareastub_478yj": {
+        "_title": "Subhead1",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text3",
+        "value": "Our answer to the first question is as simple as it is stark."
+      },
+      "generaltextareastub_556pq": {
+        "_title": "Header3",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text6",
+        "value": "Which brings us to the second question - \u003Cb\u003EWhat makes us think we can execute this bold mission?\u003C/b\u003E"
+      },
+      "generaltextareastub_8kb2r": {
+        "_title": "Body2",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text9",
+        "value": "One development that unlocked this change was the tremendous drop in the price of electricity from solar and wind—over 90% in the last decade.\n\nAt Prometheus, we’ve developed a unique tech stack that combines integrated direct air capture of CO2, cutting edge catalysts for conversion of CO2 to fuels, and a novel membrane that eliminates the need for distillation. All of the tech in Prometheus’s CO2-to-fuels process is powered only by renewable electricity, which is why we call our zero net carbon fuel “electric fuel.”\n\nThe only inputs to our process are air and renewable power. The only outputs are fuel and oxygen. There are no agricultural inputs and no waste products. And there is no limit to the scale at which CO2 can be converted into fuels. It is possible to completely replace the global use of fossil oil and gas with our zero net carbon fuels. By doing this, we can lower annual CO2 emissions by more than 20 gigatons per year, half of all emissions today. By using CO2 to make carbon negative objects—or as we call them, “banked-carbon goods”—we can remove historical CO2 emissions, storing them in useful products forever. This is how we can solve the climate crisis."
+      },
+      "generaltextareastub_ety6f": {
+        "_title": "Header4",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text10",
+        "value": "We know we have to move fast, maybe scaling faster than any industry has moved before.\n\n\u003Cb\u003EBut we believe it’s possible and we have a plan to do it.\u003C/b\u003E"
+      },
+      "generaltextareastub_gbul0": {
+        "_title": "Header1",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text1",
+        "value": "Prometheus was founded to achieve an audacious goal - to replace all oil and gas with zero net carbon fuels made from CO2 in the air."
+      },
+      "generaltextareastub_gmsa6": {
+        "_title": "Subhead2",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text4",
+        "value": "The climate crisis is the greatest threat humankind has ever faced. No less than the fate of the planet and all the life it supports hang in the balance. The stakes could not be higher."
+      },
+      "generaltextareastub_j5hdd": {
+        "_title": "Body1",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text5",
+        "value": "The pivotal moment that created Prometheus came in October of 2018 after two landmark events. The first was when the United Nations’ scientific panel on climate change released a dire report. In a list of scenes, it laid out, in graphic detail, the staggering destruction the world was all but certain to suffer in just a few short years. There was still time, the report said, to stop climate change and avoid the worst impacts. But only if the world took immediate, radical steps, not just to curb new emissions, but to remove CO2 from the air.\n\nHeeding this call, two weeks later, Y Combinator, the acclaimed Silicon Valley accelerator, put out a request: any founder with an idea for how to remove that CO2 from the air should step forward. “It’s time to take big swings at this,” it said.\n\nWe knew we had to act. That winter, Prometheus was accepted to Y Combinator and launched on Demo Day the following March. Before a packed auditorium, Prometheus founder and CEO, Rob McGinnis explained how the company could pull CO2 from the air and turn it into jet fuel, diesel, and gasoline that were atomically identical to their fossil counterparts. Not only would Prometheus’s fuels be 100% carbon neutral, their production could be scaled in time to save the Earth."
+      },
+      "generaltextareastub_nusco": {
+        "_title": "Subhead4",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text8",
+        "value": "Engineers have known how to make synthetic fuel from the air for nearly a century, but only recently has it been possible to make zero net carbon synthetic fuel at a price that can compete with fossil fuels."
+      },
+      "generaltextareastub_rc7nd": {
+        "_title": "Body3",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text12",
+        "value": "Given the magnitude of the crisis, there are some who think that the only way to respond is to fundamentally change who we are. To do and be less.\n\nWe, at Prometheus, think this would be a terrible mistake. We believe we can meet this epic challenge not in spite of, but because of who we are.\n\nThe urge to discover what lies beyond that far horizon, or that ocean, or this planet, is part of what makes us human. We are explorers and adventurers. We search for inspiration, for what’s new and what’s next. And we yearn to live better, larger lives. Throughout human existence, this restless impulse has led our species to overcome near unfathomable hardships. And it’s exactly this ability that we need now.\n\nWe shouldn’t shrink the scope of human experience. Instead, our goal should be to break the historical link between energy and the dirty fossil fuels that are destroying our world. Instead, we should make energy and the things we do with it in a brand new way.\n\nThis is our mission at Prometheus. We are propelled by the future we imagine—one in which everyone who wants to can experience the joy of a road trip, the thrill of flight, and, one day soon, the humbling awe of viewing the Earth from orbit."
+      },
+      "generaltextareastub_tax31": {
+        "_title": "Subhead5",
+        "_type": "generaltextareastub",
+        "description": "",
+        "key": "text11",
+        "value": "We also know that in order to succeed, our fuels can’t just be as good as fossil fuels, they have to be better. That’s why we’ve designed them to be high-performance and clean-burning. Most importantly, our fuels will cost the same or less than fossil fuels."
+      }
+    },
+    "chapter": {
+      "chapter-1": {
+        "chapterinfostub": {
+          "_title": "Chapter Info",
+          "_type": "chapterinfostub",
+          "new": false,
+          "number": "1",
+          "title": "FUEL FROM THE AIR",
+          "perma": "chapterinfostub"
+        },
+        "chapterstorystub": [
+          {
+            "_title": "carflyaround",
+            "_type": "chapterstorystub",
+            "copy": "Since the beginning,\nwe've been driven\nto explore",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_sqjrn"
+          },
+          {
+            "_title": "Car Front",
+            "_type": "chapterstorystub",
+            "copy": "Called by the\nopen road, and the\nspirit of adventure",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_zfiuz"
+          },
+          {
+            "_title": "Car Rear",
+            "_type": "chapterstorystub",
+            "copy": "To seek the thrill\nof heading into\nthe unknown",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "Hold Space Bar to Accelerate",
+            "perma": "chapterstorystub_38fhz"
+          },
+          {
+            "_title": "Car Overhead",
+            "_type": "chapterstorystub",
+            "copy": "But to go where we want\nto go next, we need a\nnew kind of fuel",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_d3lii"
+          },
+          {
+            "_title": "Clouds",
+            "_type": "chapterstorystub",
+            "copy": "But what if we could\nremove this CO2?",
+            "extra1": "For centuries, the way we've\nmade fuel has choked the\nair with CO2, dangerously\nwarming the planet",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_tvlpz"
+          },
+          {
+            "_title": "Solar/Wind",
+            "_type": "chapterstorystub",
+            "copy": "And turn it into\nzero net carbon fuels",
+            "extra1": "That cost the same as\nfuels extracted from\nthe ground",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_3yvxl"
+          },
+          {
+            "_title": "Fuel Forge Overhead",
+            "_type": "chapterstorystub",
+            "copy": "Let's dive into\na titan fuel forge",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_2oz6h"
+          },
+          {
+            "_title": "Fuel Forge Interior",
+            "_type": "chapterstorystub",
+            "copy": "Stage 1A",
+            "extra1": "Strong fans draw air\ninto our carbon\nsalvage tower",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "Our Technology",
+            "perma": "chapterstorystub_y638j"
+          },
+          {
+            "_title": "Fuel Forge Lower",
+            "_type": "chapterstorystub",
+            "copy": "Stage 1B",
+            "extra1": "As the air whips past,\na powerful waterfall\nstrips it of CO2 and\nwater molecules",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "Our Technology",
+            "perma": "chapterstorystub_dbbny"
+          },
+          {
+            "_title": "Molecules",
+            "_type": "chapterstorystub",
+            "copy": "",
+            "extra1": "As they stream into the forge,\nthe molecules are \"energized\"\nby renewable power to form\nhydrocarbons that can be made\ninto any type of fuel",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "Our Technology",
+            "perma": "chapterstorystub_j03b5"
+          },
+          {
+            "_title": "Molecules 2",
+            "_type": "chapterstorystub",
+            "copy": "Stage 3",
+            "extra1": "Because we're turning electrical\nenergy from solar and wind into\nthe chemical energy of fuels,\nyou can think of our fuels as\n\"liquid electricity.\"\n\nWe call them \"electrofuels.\"",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "Our Technology",
+            "perma": "chapterstorystub_1x0i4"
+          },
+          {
+            "_title": "Forge + Truck Overhead",
+            "_type": "chapterstorystub",
+            "copy": "Cleaner Air",
+            "extra1": "The only byproduct of our\nprocess is oxygen. It actually\ncleans the air around it",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_325o1"
+          },
+          {
+            "_title": "Gas Station + Truck",
+            "_type": "chapterstorystub",
+            "copy": "The Result",
+            "extra1": "The result is zero net carbon\ngasoline, diesel, and jet fuel\nthat are atomically identical\nto fossil fuels, cost the same,\nand can run in any engine",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_2r5zd"
+          },
+          {
+            "_title": "Gas Station Car Focus",
+            "_type": "chapterstorystub",
+            "copy": "A New Era",
+            "extra1": "The moment you fill\nyour tank, you drive\ninto a whole new era",
+            "extra2": "the era of Net\nZero Emissions",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_p0rs8"
+          }
+        ]
+      },
+      "chapter-2": {
+        "chapterinfostub": {
+          "_title": "Chapter Info",
+          "_type": "chapterinfostub",
+          "new": false,
+          "number": "2",
+          "title": "THE ROAD TO NET ZERO",
+          "perma": "chapterinfostub"
+        },
+        "chapterstorystub": [
+          {
+            "_title": "Gas Station",
+            "_type": "chapterstorystub",
+            "copy": "As you pull away,\nthe surge of\nfreedom is classic",
+            "extra1": "But this is no ordinary\nroad trip. You’re running\non fuel that doesn’t\nharm the planet",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_1uxg9"
+          },
+          {
+            "_title": "Truck Interior",
+            "_type": "chapterstorystub",
+            "copy": "You pass big rigs, which\nhaul 70% of U.S. freight.\nThey’re powered by\nzero net carbon diesel",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_3j91c"
+          },
+          {
+            "_title": "Plane",
+            "_type": "chapterstorystub",
+            "copy": "Overhead, a jet soars.\nIts cross-country flight\nis 100% carbon neutral",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_i33nc"
+          },
+          {
+            "_title": "Fuel Forge + Oil Derrick",
+            "_type": "chapterstorystub",
+            "copy": "The old, polluting 20th\ncentury technology is\nwhere it belongs",
+            "extra1": "in the past",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_n6sdy"
+          },
+          {
+            "_title": "Solar + Wind",
+            "_type": "chapterstorystub",
+            "copy": "At Prometheus,\nwe make energy in\na brand new way\n— from the air",
+            "extra1": "Using renewable power,\nwe can turn atmospheric CO2\ninto all kinds of things",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_d2618"
+          },
+          {
+            "_title": "Distillery",
+            "_type": "chapterstorystub",
+            "copy": "From zero net\ncarbon spirits,\nlike gin and whiskey",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_47b26"
+          },
+          {
+            "_title": "Store",
+            "_type": "chapterstorystub",
+            "copy": "To carbon negative\ngoods that store\ntheir CO2 forever",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_73nwk"
+          },
+          {
+            "_title": "Tent",
+            "_type": "chapterstorystub",
+            "copy": "The goal is a world\nof limitless potential,\nwhere both humans\nand the planet can thrive",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_cc7gm"
+          },
+          {
+            "_title": "Campfire",
+            "_type": "chapterstorystub",
+            "copy": "Net Zero may be our\nnearest destination,\nbut the journey is\njust beginning",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_menv4"
+          },
+          {
+            "_title": "CTA",
+            "_type": "chapterstorystub",
+            "copy": "",
+            "extra1": "Learn more about how we make our products",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "Our Technology",
+            "perma": "chapterstorystub_3ar6y"
+          }
+        ]
+      },
+      "chapter-3": {
+        "chapterinfostub": {
+          "_title": "Chapter Info",
+          "_type": "chapterinfostub",
+          "new": false,
+          "number": "3",
+          "title": "THE NEED FOR SPEED",
+          "perma": "chapterinfostub"
+        },
+        "chapterstorystub": [
+          {
+            "_title": "Landing",
+            "_type": "chapterstorystub",
+            "copy": "So we have the tech to\nturn CO₂ from the air\ninto zero net carbon fuel",
+            "extra1": "How do we get it into our\ncars, trucks, planes, and ships\nin time to save the planet?",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_moquc"
+          },
+          {
+            "_title": "Over Factory",
+            "_type": "chapterstorystub",
+            "copy": "We build a MetaForge",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_56we3"
+          },
+          {
+            "_title": "Conveyor Belt",
+            "_type": "chapterstorystub",
+            "copy": "The MetaForge is the\nfactory that will mass produce\nour Titan Fuel Forges",
+            "extra1": "We call it a MetaForge\nbecause it's a big forge\nthat makes forges",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_t1mby"
+          },
+          {
+            "_title": "Loading Dock",
+            "_type": "chapterstorystub",
+            "copy": "Our fuel forges will be\ninstalled far and wide,\nanywhere there's\nrenewable power",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_2u1zb"
+          },
+          {
+            "_title": "Caravan",
+            "_type": "chapterstorystub",
+            "copy": "Our fuel forges will be\ninstalled far and wide,\nanywhere renewable\npower can be made",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_rv9be"
+          },
+          {
+            "_title": "Shipping Dock",
+            "_type": "chapterstorystub",
+            "copy": "One MetaForge can make\n500,000 forges each year",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_vqwib"
+          },
+          {
+            "_title": "Destination",
+            "_type": "chapterstorystub",
+            "copy": "Each fuel forge can\nmake approx. 20,000 gallons\nof zero net carbon\nfuel per year",
+            "extra1": "",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_pizj2"
+          },
+          {
+            "_title": "Car Transformation",
+            "_type": "chapterstorystub",
+            "copy": "That means, every year,\na single forge can turn\n35 gas-powered cars\ninto zero carbon cars",
+            "extra1": "instantly",
+            "extra2": "Let's do the math -\nif the MetaForge\nmakes 500,000\nforges in a year",
+            "extra3": "that's 17.8 million\ncars decarbonized",
+            "extra4": "The next year,\nanother 500,000\nforges",
+            "extra5": "another 17.8 million\ncars become zero\ncarbon vehicles",
+            "userInstruction": "",
+            "perma": "chapterstorystub_3o6oz"
+          },
+          {
+            "_title": "Ending",
+            "_type": "chapterstorystub",
+            "copy": "At this rate, one MetaForge\ncan decarbonize over 10%\nof the world's gas-powered\ncars in less than a decade",
+            "extra1": "But we want to\nget them all",
+            "extra2": "so we'll build as many MetaForges as it takes",
+            "extra3": "This is how we\npower the 21st century",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "",
+            "perma": "chapterstorystub_qpsjf"
+          },
+          {
+            "_title": "CTA",
+            "_type": "chapterstorystub",
+            "copy": "",
+            "extra1": "Learn about the MetaForge\nand the story behind this chapter",
+            "extra2": "",
+            "extra3": "",
+            "extra4": "",
+            "extra5": "",
+            "userInstruction": "metaforge",
+            "perma": "chapterstorystub_98him"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "disclaimer": "We are collecting this information so that we can contact you in the future with updates about our product. We will never share it with any third party companies and you may unsubscribe at any time by following the instructions in the emails you receive.",
+      "error": "Please fill in all fields",
+      "fieldLabels": [
+        {
+          "id": "firstName",
+          "text": "First Name"
+        },
+        {
+          "id": "lastName",
+          "text": "Last Name"
+        },
+        {
+          "id": "emailAddress",
+          "text": "Email Address"
+        }
+      ],
+      "formHeader": "STAY UP TO DATE WITH OUR PROGRESS AND HOW YOU CAN SUPPORT US",
+      "success": "Thank you for joining us.",
+      "terms": "{\"ops\":[{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"PROMETHEUS FUELS PRIVACY POLICY\"},{\"attributes\":{\"align\":\"center\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"Effective date:\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\" 04/14/2021\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"Prometheus Fuels (“Prometheus Fuels”, “we”, “our”, and/or “us”) values the privacy of the individuals who use our website (our “Service”). This privacy policy (the “Privacy Policy”) explains how we collect, use, and share information from users of our Service (“Users”, “you”, and/or “your”). By using our Service, you agree to the collection, use, and disclosure of your information as described in this Privacy Policy, and the other procedures described in this Privacy Policy.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"attributes\":{\"align\":\"center\"},\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"INFORMATION WE COLLECT\"},{\"attributes\":{\"align\":\"center\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"We may collect a variety of information from or about you or your devices from various sources, as described below.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"Information You Provide to Us.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"Contact Information. If you sign up for our newsletter, we will collect certain information from you, such as your name, email address, and phone number. You can unsubscribe from our promotional emails via the link provided in the emails. Even if you opt-out of receiving promotional messages from us, you will continue to receive administrative messages from us.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"Other Communications. If you contact us directly, we may receive additional information about you. For example, if you contact us for customer support, we may receive your name, email address, phone number, the contents of the message or attachments you may send to us, and any other information you choose to provide.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"Information We Collect When You Use Our Service.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"Information from Cookies and Similar Tracking Technologies. We and our third party partners, such as analytics partners, collect information (such as the information described below) using cookies, pixels, and similar technologies. Cookies are small text files that contain a string of alphanumeric characters. We may use both session cookies and persistent cookies. A session cookie disappears after you close your browser. A persistent cookie remains after you close your browser and may be used by your browser on subsequent visits to our Service. Please review your web browser’s “Help” file to learn how to modify your cookie settings. Please note that if you delete or choose not to accept cookies from our Service, you may not be able to utilize it to its fullest potential.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"Location Information. We infer your general location information, for example, by using your internet protocol (“IP”) address. \"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"Device Information. We automatically collect certain technical information about the device, browser, and software you use to access our Service, such as your IP address, operating system version, web browser type, phone carrier and manufacturer, and device identifiers.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"Usage Information. To help us understand how you use our Service and to help us improve it, we automatically receive information about your interactions with our Service, such as information about the pages or other content you view and the dates and times of your visits.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"HOW WE USE THE INFORMATION WE COLLECT\"},{\"attributes\":{\"align\":\"center\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"We may use the information we collect:\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\" \"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"To provide, maintain, enhance, and improve our Service;\"},{\"attributes\":{\"align\":\"justify\",\"list\":\"bullet\"},\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"To understand and analyze how you use our Service and develop new products, services, features and functionality;\"},{\"attributes\":{\"align\":\"justify\",\"list\":\"bullet\"},\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"To communicate with you, provide you with updates and other information relating to our Service, provide you with information that you request, respond to comments and questions, and otherwise provide customer support;\"},{\"attributes\":{\"align\":\"justify\",\"list\":\"bullet\"},\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"For marketing and advertising purposes, such as developing and providing promotional and advertising materials that may be relevant, valuable, or otherwise of interest to you;\"},{\"attributes\":{\"align\":\"justify\",\"list\":\"bullet\"},\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"To detect, prevent, and address fraud and other trust and safety issues that may arise;\"},{\"attributes\":{\"align\":\"justify\",\"list\":\"bullet\"},\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"For compliance purposes, including \"},{\"insert\":\"enforcing our legal rights, as may be required by applicable laws and regulations, or as requested by any legal process or governmental agency; and\"},{\"attributes\":{\"align\":\"justify\",\"list\":\"bullet\"},\"insert\":\"\\n\"},{\"insert\":\"For other purposes for which we provide specific notice at the time the information is collected.\"},{\"attributes\":{\"align\":\"justify\",\"list\":\"bullet\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"HOW WE SHARE THE INFORMATION WE COLLECT\"},{\"attributes\":{\"align\":\"center\"},\"insert\":\"\\n\"},{\"insert\":\"\\nVendors and Service Providers. We may share any information we receive with vendors and service providers retained in connection with the provision of our Service.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\nAnalytics Partners. We use analytics services such as Google Analytics to collect and process certain analytics data. These services may also collect information regarding your use of other websites, apps, and online services. You can learn about Google’s practices by going https://www.google.com/policies/privacy/partners/, and opt-out of them by downloading the Google Analytics opt-out browser add-on, available at https://tools.google.com/dlpage/gaoptout. \"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\nAs Required by Law and Similar Disclosures. We may access, preserve, and disclose your information if we believe doing so is required or appropriate to: (a) comply with law enforcement requests and legal process, such as a court order or subpoena; (b) respond to your requests; or (c) protect your, our, or others’ rights, property, or safety.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\nMerger, Sale, or Other Asset Transfers. We may transfer your information to service providers, advisors, potential transactional partners, or other third parties in connection with the consideration, negotiation, or completion of a corporate transaction in which we are acquired by or merged with another company or we sell, liquidate, or transfer all or a portion of our assets. The use of your information following any of these events will be governed by the provisions of this Privacy Policy in effect at the time the applicable information was collected.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\nConsent. We may also disclose your information with your permission.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"THIRD PARTIES\"},{\"attributes\":{\"align\":\"center\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"Our Service may contain links to other websites, products, or services that we do not own or operate. We are not responsible for the privacy practices of these third parties. Please be aware that this Privacy Policy does not apply to your activities on these third party services or any information you disclose to these third parties. We encourage you to read their privacy policies before providing any information to them.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"SECURITY\"},{\"attributes\":{\"align\":\"center\"},\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"We make reasonable efforts to protect your information by using physical and electronic safeguards designed to improve the security of the information we maintain. However, as no electronic transmission or storage of information can be entirely secure, we can make no guarantees as to the security or privacy of your information.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"CHILDREN\"},{\"attributes\":{\"align\":\"center\"},\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"We do not knowingly collect, maintain, or use personal information from children under 13 years of age, and no part of our Service is directed to children. If you learn that a child has provided us with personal information in violation of this Privacy Policy, then you may alert us at info@prometheusfuels.com. \"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"INTERNATIONAL VISITORS\"},{\"attributes\":{\"align\":\"center\"},\"insert\":\"\\n\"},{\"insert\":\"Our Service is hosted in the United States and intended for visitors located within the United States. If you choose to use the Service from the European Union or other regions of the world with laws governing data collection and use that may differ from U.S. law, then please note that you are transferring your personal information outside of those regions to the United States for storage and processing. Also, we may transfer your data from the U.S. to other countries or regions in connection with storage and processing of data, fulfilling your requests, and operating the Service. By providing any information, including personal information, on or to the Service, you consent to such transfer, storage, and processing.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"CHANGES TO THE PRIVACY POLICY\"},{\"attributes\":{\"align\":\"center\"},\"insert\":\"\\n\"},{\"insert\":\"\\nWe will post any adjustments to the Privacy Policy on this page, and the revised version will be effective when it is posted. If we materially change the ways in which we use or share personal information previously collected from you through the Service, we will notify you through the Service, by email, or other communication.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\",\"bold\":true},\"insert\":\"CONTACT US\"},{\"attributes\":{\"align\":\"center\"},\"insert\":\"\\n\"},{\"attributes\":{\"background\":\"transparent\"},\"insert\":\"If you have any questions, comments, or concerns about this Privacy Policy, please email us at legal@prometheusfuels.com.\"},{\"attributes\":{\"align\":\"justify\"},\"insert\":\"\\n\"},{\"insert\":\"\\n\\n\"}]}",
+      "title": "JOIN THE ENERGY REVOLUTION"
+    },
+    "home": {
+      "_order": [
+        "generaltextstub_bt6f8",
+        "generaltextareastub_skegy",
+        "generaltextareastub_6xdcr",
+        "generaltextstub_0in0m"
+      ],
+      "_temp": "Home",
+      "generaltextareastub_6xdcr": {
+        "_title": "Body",
+        "_type": "generaltextareastub",
+        "description": "home page body copy",
+        "key": "homeBody",
+        "value": "We turn CO2 from the air into gasoline, diesel & jet fuel"
+      },
+      "generaltextareastub_skegy": {
+        "_title": "Subhead",
+        "_type": "generaltextareastub",
+        "description": "Home page subhead",
+        "key": "homeSubhead",
+        "value": "Zero Net Carbon Fuels"
+      },
+      "generaltextstub_0in0m": {
+        "_title": "CTA",
+        "_type": "generaltextstub",
+        "description": "home page CTA - link to About/Mission page",
+        "key": "homeCTA",
+        "value": "MISSION"
+      },
+      "generaltextstub_bt6f8": {
+        "_title": "Header",
+        "_type": "generaltextstub",
+        "description": "home page headline",
+        "key": "homeHeader",
+        "value": "Prometheus"
+      }
+    },
+    "navigation": {
+      "navItems": [
+        {
+          "id": "home",
+          "text": "Home"
+        },
+        {
+          "id": "about",
+          "text": "Mission"
+        },
+        {
+          "id": "technology",
+          "text": "Technology"
+        },
+        {
+          "id": "news",
+          "text": "On the Road"
+        },
+        {
+          "id": "contact",
+          "text": "Connect"
+        }
+      ],
+      "title": "Navigation"
+    },
+    "partners": {
+      "_temp": "",
+      "images": [
+        {
+          "alt": "Air Race World Championship",
+          "asset": "https://storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1643739489262_eF2.png"
+        },
+        {
+          "alt": "American Airlines",
+          "asset": "https://storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1643739520681_tCA.png"
+        },
+        {
+          "alt": "ASTM International",
+          "asset": "https://storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1643739531840_kyW.png"
+        },
+        {
+          "alt": "BMW I Ventures",
+          "asset": "https://storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1643739547411_9hQ.png"
+        },
+        {
+          "alt": "Boom Supersonic",
+          "asset": "https://storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1643739555775_iLL.png"
+        },
+        {
+          "alt": "Jetpack Aviation",
+          "asset": "https://storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1643739564509_vTH.png"
+        },
+        {
+          "alt": "Maersk",
+          "asset": "https://storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1643739574194_zDw.png"
+        },
+        {
+          "alt": "Metaplanet",
+          "asset": "https://storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1643739584810_Y5W.png"
+        },
+        {
+          "alt": "Oak Ridge National Laboratory",
+          "asset": "https://storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1643739594699_TNo.png"
+        },
+        {
+          "alt": "Y Combinator",
+          "asset": "https://storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1643739637579_vkM.png"
+        }
+      ],
+      "title": "Partners"
+    },
+    "technology": {
+      "carbon-salvage": {
+        "technologyinfostub": {
+          "_title": "Section Info",
+          "_type": "technologyinfostub",
+          "title": "CARBON\u003Cbr\u003ESALVAGE",
+          "perma": "technologyinfostub"
+        },
+        "generaltextareastub": [
+          {
+            "_title": "bodyCopy1",
+            "_type": "generaltextareastub",
+            "description": "",
+            "key": "bodyCopy1",
+            "value": "In Stage One, CO2 and water are captured from the air. Industrial fans suck air in and blow it across a waterfall that absorbs CO2 and water.",
+            "perma": "generaltextareastub_u08m1"
+          }
+        ]
+      },
+      "charging": {
+        "technologyinfostub": {
+          "_title": "Section Info",
+          "_type": "technologyinfostub",
+          "title": "CHARGING",
+          "perma": "technologyinfostub"
+        },
+        "generaltextareastub": [
+          {
+            "_title": "bodyCopy1",
+            "_type": "generaltextareastub",
+            "description": "",
+            "key": "bodyCopy1",
+            "value": "In Stage Two, the captured CO2 and water combine with renewable electricity in a hydrocarbon electrolyzer called the Faraday Reactor. The electricity 'charges' or 'energizes' the carbon with hydrogen molecules from the water to make fuel.",
+            "perma": "generaltextareastub_sc23k"
+          },
+          {
+            "_title": "bodyCopy2",
+            "_type": "generaltextareastub",
+            "description": "",
+            "key": "bodyCopy2",
+            "value": "During this step, our Forge releases oxygen - its only byproduct - functioning as a 'mechanical forest.'",
+            "perma": "generaltextareastub_0qhbv"
+          }
+        ]
+      },
+      "custom-assembly": {
+        "technologyinfostub": {
+          "_title": "Section Info",
+          "_type": "technologyinfostub",
+          "title": "FUEL\u003Cbr\u003EUPGRADING",
+          "perma": "technologyinfostub"
+        },
+        "generaltextareastub": [
+          {
+            "_title": "bodyCopy1",
+            "_type": "generaltextareastub",
+            "description": "",
+            "key": "bodyCopy1",
+            "value": "In Stage Four, a final catalyst step combines the fuel molecules into longer-chain hydrocarbons and recovers water. This step can be customized to make gasoline, diesel, or jet fuel.",
+            "perma": "generaltextareastub_yi5kr"
+          }
+        ]
+      },
+      "landing": {
+        "technologyinfostub": {
+          "_title": "Section Info",
+          "_type": "technologyinfostub",
+          "title": "TECHNOLOGY",
+          "perma": "technologyinfostub"
+        }
+      },
+      "molecular-sorting": {
+        "technologyinfostub": {
+          "_title": "Section Info",
+          "_type": "technologyinfostub",
+          "title": "FUEL\u003Cbr\u003EEXTRACTION",
+          "perma": "technologyinfostub"
+        },
+        "generaltextareastub": [
+          {
+            "_title": "bodyCopy1",
+            "_type": "generaltextareastub",
+            "description": "",
+            "key": "bodyCopy1",
+            "value": "In Stage Three, the fuels are separated from water using a new membrane called the Maxwell Core. Its carbon nanotube pores allow fuels through while rejecting water. The Maxwell Core makes distillation obsolete.",
+            "perma": "generaltextareastub_fllcm"
+          }
+        ]
+      },
+      "titan-fuel-forge": {
+        "technologyinfostub": {
+          "_title": "Section Info",
+          "_type": "technologyinfostub",
+          "title": "TITAN FUEL\u003Cbr\u003EFORGE",
+          "perma": "technologyinfostub"
+        },
+        "generaltextstub": [
+          {
+            "_title": "subHead",
+            "_type": "generaltextstub",
+            "description": "",
+            "key": "subHead",
+            "value": "INSIDE A",
+            "perma": "generaltextstub_mvohb"
+          }
+        ],
+        "generaltextareastub": [
+          {
+            "_title": "bodyCopy1",
+            "_type": "generaltextareastub",
+            "description": "This is the bolded first paragraph text",
+            "key": "bodyCopy1",
+            "value": "The Prometheus Titan Fuel Forge is a reverse combustion machine. It pulls CO2 and water [a.k.a. exhaust] from the air and combines them with electricity from solar and wind power to make low-cost, high-performance, zero net carbon e-fuels.",
+            "perma": "generaltextareastub_mic2f"
+          },
+          {
+            "_title": "bodyCopy2",
+            "_type": "generaltextareastub",
+            "description": "",
+            "key": "bodyCopy2",
+            "value": "These fuels are 'engine-ready,' able to run in our existing cars, trucks, and planes with no modification.",
+            "perma": "generaltextareastub_mvwco"
+          }
+        ],
+        "technologypaireditem": [
+          {
+            "_title": "carbonSalvage",
+            "_type": "technologypaireditem",
+            "subTitle": "CARBON SALVAGE",
+            "title": "1",
+            "perma": "technologypaireditem_pxzwx"
+          }
+        ]
+      },
+      "video-test": {
+        "technologyinfostub": {
+          "_title": "Section Info",
+          "_type": "technologyinfostub",
+          "title": "",
+          "perma": "technologyinfostub"
+        },
+        "technologypaireditem": [
+          {
+            "_title": "Tech paired text example",
+            "_type": "technologypaireditem",
+            "subTitle": "",
+            "title": "",
+            "perma": "technologypaireditem_d8tww"
+          }
+        ],
+        "generaltextstub": [
+          {
+            "_title": "General text example",
+            "_type": "generaltextstub",
+            "description": "",
+            "key": "",
+            "value": "",
+            "perma": "generaltextstub_s8cpi"
+          }
+        ],
+        "generaltextareastub": [
+          {
+            "_title": "General Long text example",
+            "_type": "generaltextareastub",
+            "description": "",
+            "key": "",
+            "value": "",
+            "perma": "generaltextareastub_n1dpf"
+          }
+        ]
+      }
+    },
+    "updated": 1740684621586
+  }

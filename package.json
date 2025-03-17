@@ -1,0 +1,21 @@
+{
+  "name": "prometh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.ejs"
+  },
+  "author": "epolis",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "three": "^0.174.0",
+    "vercel": "^41.4.1"
+  }
+}

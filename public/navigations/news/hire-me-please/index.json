@@ -1,0 +1,26 @@
+{
+    "newsarticlemain": {
+        "_title": "Main Content",
+        "_type": "newsarticlemain",
+        "authorName": "",
+        "authorTitle": "",
+        "body": "{\"ops\":[{\"insert\":\" Hire me ! >:( \\n\\n\"},{\"insert\":\"\\n\\n\\n\\n\"}]}",
+        "date": "February 12, 2025",
+        "heroImage": "/assets/images/newsimg/EurpMVoUYAILM19.png",
+        "hide": false,
+        "thumbnailImage": "/assets/images/newsimg/EurpMVoUYAILM19.png",
+        "title": "Hire me!",
+        "perma": "newsarticlemain"
+    },
+    "newsarticlemeta": {
+      "_title": "Meta Information",
+      "_type": "newsarticlemeta",
+      "pageDescription": " ",
+      "pageTitle": "",
+      "separator": "",
+      "socialDescription": "",
+      "socialImage": "/assets/images/newsimg/EurpMVoUYAILM19.png",
+      "socialTitle": "Hire me!",
+      "perma": "newsarticlemeta"
+    }
+  }

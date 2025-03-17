@@ -1,0 +1,39 @@
+[ {
+    "slug": "i-recreated-this",
+    "authorName": "latte",
+    "authorTitle": "",
+    "date": "February 15, 2025",
+    "hide": false,
+    "heroImage": "/assets/images/newsimg/1683661425267585024.gif",
+    "thumbnailImage": "/assets/images/newsimg/1683661425267585024.gif",
+    "title": "I recreated this",
+    "meta": {
+        "title": "I recreated this",
+        "description": "blah blah blah",
+        "social": {
+            "title": "I recreated this",
+            "description": "blah blah blah",
+            "image": "/assets/images/newsimg/1683661425267585024.gif"
+        }
+    }
+},
+{
+    "slug": "hire-me-please",
+    "authorName": "latte",
+    "authorTitle": "",
+    "date": "February 12, 2025",
+    "hide": false,
+    "heroImage": "/assets/images/newsimg/EurpMVoUYAILM19.png",
+    "thumbnailImage": "/assets/images/newsimg/EurpMVoUYAILM19.png",
+    "title": "Hire me please",
+    "meta": {
+        "title": "I recreated this",
+        "description": "blah blah blah",
+        "social": {
+            "title": "I recreated this",
+            "description": "blah blah blah",
+            "image": "/assets/images/newsimg/EurpMVoUYAILM19.png"
+        }
+    }
+}
+]

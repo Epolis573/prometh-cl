@@ -1,0 +1,26 @@
+{
+    "newsarticlemain": {
+        "_title": "Main Content",
+        "_type": "newsarticlemain",
+        "authorName": "",
+        "authorTitle": "",
+        "body": "{\"ops\":[{\"insert\":\" I hope you like it as much as i enjoyed making it. \\n\\n\"},{\"insert\":\"\\n\\n\\n\\n\"}]}",
+        "date": "February 12, 2025",
+        "heroImage": "/assets/images/newsimg/1683661425267585024.gif",
+        "hide": false,
+        "thumbnailImage": "/assets/images/newsimg/1683661425267585024.gif",
+        "title": "I recreated this",
+        "perma": "newsarticlemain"
+    },
+    "newsarticlemeta": {
+      "_title": "Meta Information",
+      "_type": "newsarticlemeta",
+      "pageDescription": " ",
+      "pageTitle": "We Made History",
+      "separator": "",
+      "socialDescription": "",
+      "socialImage": "/assets/images/newsimg/1683661425267585024.gif",
+      "socialTitle": "I recreated this",
+      "perma": "newsarticlemeta"
+    }
+  }
