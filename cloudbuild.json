@@ -15,7 +15,7 @@
           "deploy",
           "my-service",
           "--image",
-          "gcr.io/$PROJECT_ID/my-service",
+          "gcr.io/avid-influence-454106-d5/my-service",
           "--platform",
           "managed",
           "--region",
