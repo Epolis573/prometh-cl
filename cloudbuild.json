@@ -19,7 +19,7 @@
           "--platform",
           "managed",
           "--region",
-          "global",
+          "us-central1",
           "--allow-unauthenticated"
         ]
       }
