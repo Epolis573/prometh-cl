@@ -27,7 +27,9 @@
     
     "images": ["gcr.io/avid-influence-454106-d5/my-service"],
     "timeout": "600s",
-    "logging": "CLOUD_LOGGING_ONLY"
+    "options": {
+        "logging": "CLOUD_LOGGING_ONLY"
+      }
   }
   
   
