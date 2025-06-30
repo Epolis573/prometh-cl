@@ -3,8 +3,10 @@ const path = require("path");
 const app = express();
 const port = 8080;
 
-// Static
-app.use(express.static(path.join(__dirname, "../public")));
+// Serve static files locally, but NOT on Vercel
+if (process.env.VERCEL !== "1") {
+  app.use(express.static(path.join(__dirname, "../public")));
+}
 
 // Set Views
 app.set("views", path.join(__dirname, "../views"));
@@ -21,5 +23,9 @@ app.get("/news", (req, res) => {
   res.render("news");
 });
 
-// Listen
-app.listen(port, () => console.info(`Listening on port ${port}`));
+// Listen (only if not running as a Vercel serverless function)
+if (process.env.VERCEL !== "1") {
+  app.listen(port, () => console.info(`Listening on port ${port}`));
+}
+
+module.exports = app; // For Vercel
