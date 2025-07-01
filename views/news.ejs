@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <base>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, viewport-fit=cover">
-    <title>News - Prometheus Fuels</title>
+    <title>Prometheus</title>
     <link rel="canonical" href="news.html">
-    <meta name="description" content="Find the latest Prometheus news and updates on our progress ">
+    <meta name="description"
+        content="We remove CO2 from the air and turn it into gasoline and jet fuel. Our fuels are the first zero net carbon fuels that can compete with fossil fuels on price.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Prometheus Fuels - News">
-    <meta name="twitter:description" content="Find the latest Prometheus news and updates on our progress ">
-    <meta name="twitter:image"
-        content="../storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1618222484240_QX1.png">
+    <meta name="twitter:title" content="Prometheus">
+    <meta name="twitter:description"
+        content="We remove CO2 from the air and turn it into gasoline and jet fuel. Our fuels are the first zero net carbon fuels that can compete with fossil fuels on price.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="news.html">
-    <meta property="og:title" content="Prometheus Fuels - News">
-    <meta property="og:description" content="Find the latest Prometheus news and updates on our progress ">
-    <meta property="og:image"
-        content="../storage.googleapis.com/prometheus-fuels.appspot.com/uploads/1618222484240_QX1.png">
-    <meta property="og:image:type" content="image/png">
+    <meta property="og:url" content="index.html">
+    <meta property="og:title" content="Prometheus Fuels">
+    <meta property="og:description"
+        content="We remove CO2 from the air and turn it into gasoline and jet fuel. Our fuels are the first zero net carbon fuels that can compete with fossil fuels on price.">
+    <meta property="og:image:type" content="<%= BLOB_BASE_URL %>/public/image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest.txt">
-    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#E84733">
+    <link rel="icon" type="<%= BLOB_BASE_URL %>/public/image/png" sizes="32x32" href="<%= BLOB_BASE_URL %>/public/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="<%= BLOB_BASE_URL %>/public/image/png" sizes="16x16" href="<%= BLOB_BASE_URL %>/public/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="<%= BLOB_BASE_URL %>/public/assets/favicons/site.webmanifest.txt">
+    <link rel="mask-icon" href="<%= BLOB_BASE_URL %>/public/assets/favicons/safari-pinned-tab.svg" color="#E84733">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="theme-color" content="#FFFFFF">
-    <link rel="stylesheet" href="assets/css/video-js.min.css">
+    <link rel="stylesheet" href="<%= BLOB_BASE_URL %>/public/assets/css/video-js.min.css">
     <style type="text/css">
         @keyframes GRAINS {
             0% {
@@ -46,7 +44,7 @@
 
         @font-face {
             font-family: "FuturaLT-Bold";
-            src: url(assets/fonts/FuturaLT-Bold.ttf) format("truetype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/FuturaLT-Bold.ttf') format("truetype");
             font-weight: 400;
             font-style: normal
         }
@@ -371,7 +369,7 @@
 
         @font-face {
             font-family: "marscondensed-regular-TRIAL";
-            src: url(assets/fonts/marscondensed-regular-TRIAL.otf) format("opentype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/marscondensed-regular-TRIAL.otf') format("opentype");
             font-weight: 400;
             font-style: normal
         }
@@ -481,21 +479,21 @@
 
         @font-face {
             font-family: "marscondensed-regular-TRIAL";
-            src: url(assets/fonts/marscondensed-regular-TRIAL.otf) format("opentype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/marscondensed-regular-TRIAL.otf') format("opentype");
             font-weight: 400;
             font-style: bold
         }
 
         @font-face {
             font-family: "FuturaLT-Bold";
-            src: url(assets/fonts/FuturaLT-Bold.ttf) format("truetype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/FuturaLT-Bold.ttf') format("truetype");
             font-weight: 600;
             font-style: normal
         }
 
         @font-face {
             font-family: "FuturaLT-Medium";
-            src: url(assets/fonts/FuturaLT-Medium.ttf) format("truetype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/FuturaLT-Medium.ttf') format("truetype");
             font-weight: 400;
             font-style: normal
         }
@@ -532,7 +530,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url(assets/images/textures/grains.png);
+            background-image: url('<%= BLOB_BASE_URL %>/public/assets/images/textures/grains.png');
             background-size: contain;
             filter: brightness(4.75);
             transition: all 1000ms cubic-bezier(.19, 1, .22, 1) 150ms
@@ -570,7 +568,7 @@
             transform: translateY(-200%);
             padding: 150px 0 0;
             margin: 0 auto 4.5rem;
-            background: url(assets/images/textures/grains_2.jpg);
+            background: url('<%= BLOB_BASE_URL %>/public/assets/images/textures/grains_2.jpg');
             background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
@@ -1100,21 +1098,21 @@
 
         @font-face {
             font-family: "marscondensed-regular-TRIAL";
-            src: url(assets/fonts/marscondensed-regular-TRIAL.otf) format("opentype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/marscondensed-regular-TRIAL.otf') format("opentype");
             font-weight: 400;
             font-style: bold
         }
 
         @font-face {
             font-family: "FuturaLT-Bold";
-            src: url(assets/fonts/FuturaLT-Bold.ttf) format("truetype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/FuturaLT-Bold.ttf') format("truetype");
             font-weight: 600;
             font-style: normal
         }
 
         @font-face {
             font-family: "FuturaLT-Medium";
-            src: url(assets/fonts/FuturaLT-Medium.ttf) format("truetype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/FuturaLT-Medium.ttf') format("truetype");
             font-weight: 400;
             font-style: normal
         }
@@ -1151,7 +1149,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url(assets/images/textures/grains.png);
+            background-image: url('<%= BLOB_BASE_URL %>/public/assets/images/textures/grains.png');
             background-repeat-y: repeat;
             filter: brightness(2.75);
             opacity: 0;
@@ -1170,7 +1168,7 @@
             margin: 0 auto;
             z-index: 1;
             width: 80vw;
-            background: url(assets/images/textures/grains_2.jpg);
+            background: url('<%= BLOB_BASE_URL %>/public/assets/images/textures/grains_2.jpg');
             background-size: cover;
             -webkit-background-clip: text;
             background-clip: text
@@ -1496,21 +1494,21 @@
 
         @font-face {
             font-family: "marscondensed-regular-TRIAL";
-            src: url(assets/fonts/marscondensed-regular-TRIAL.otf) format("opentype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/marscondensed-regular-TRIAL.otf') format("opentype");
             font-weight: 400;
             font-style: bold
         }
 
         @font-face {
             font-family: "FuturaLT-Bold";
-            src: url(assets/fonts/FuturaLT-Bold.ttf) format("truetype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/FuturaLT-Bold.ttf') format("truetype");
             font-weight: 600;
             font-style: normal
         }
 
         @font-face {
             font-family: "FuturaLT-Medium";
-            src: url(assets/fonts/FuturaLT-Medium.ttf) format("truetype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/FuturaLT-Medium.ttf') format("truetype");
             font-weight: 400;
             font-style: normal
         }
@@ -1617,14 +1615,14 @@
 
         @font-face {
             font-family: "Futura";
-            src: url(assets/fonts/FuturaLT-Bold.ttf) format("truetype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/FuturaLT-Bold.ttf') format("truetype");
             font-weight: 700;
             font-style: normal
         }
 
         @font-face {
             font-family: "Futura";
-            src: url(assets/fonts/FuturaLT-Medium.ttf) format("truetype");
+            src: url('<%= BLOB_BASE_URL %>/public/assets/fonts/FuturaLT-Medium.ttf') format("truetype");
             font-weight: 500;
             font-style: normal
         }
@@ -3554,9 +3552,6 @@
             outline: 0
         }
     </style>
-    <script src="../js.sentry-cdn.com/dd3054e8258647d3963aab2ecf5f6b30.min.js" crossorigin="anonymous"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160159103-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -3565,13 +3560,13 @@
     </script>
     <script>
         (function () {
-            window._CONFIG_ = { "ENV": "production", "CMS": "/navigations", "newsletterRoot": "/" };
+            window._CONFIG_ = { "ENV": "production", "CMS": "<%= BLOB_BASE_URL %>/public/navigations", "newsletterRoot": "/" };
             window._CACHE_ = '1740684676441';
-            window.UIL_STATIC_PATH = 'assets/data/uil.1740684676441.json';
+            window.UIL_STATIC_PATH = '<%= BLOB_BASE_URL %>/public/assets/data/uil.1740684676441.json';
             var p = 'app';
             try { eval('let obj = {}; obj?.prop') } catch (e) { window._ES5_ = true; p = 'es5-' + p; }
             var s = document.createElement('script');
-            s.src = 'assets/js/' + p + '.' + window._CACHE_ + '.js';
+            s.src = '<%= BLOB_BASE_URL %>/public/assets/js/' + p + '.' + window._CACHE_ + '.js';
             s.async = true;
             document.head.appendChild(s);
         })();
@@ -3580,6 +3575,5 @@
 
 <body>
 </body>
-
 
 </html>
