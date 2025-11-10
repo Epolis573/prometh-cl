@@ -1,9 +1,9 @@
 {
   "version": 2,
   "functions": {
-    "api/index.js": { "runtime": "nodejs@22.x" },
+    "api/index.js": { "runtime": "nodejs22.x" },
     "api/render.js": {
-      "runtime": "nodejs@22.x",
+      "runtime": "nodejs22.x",
       "includeFiles": "views/**/*.ejs"
     }
   },
