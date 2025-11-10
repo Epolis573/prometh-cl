@@ -1,1 +1,4 @@
 public/
+Dockerfile
+dockerfile
+cloudbuild.json
