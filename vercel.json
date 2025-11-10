@@ -4,13 +4,13 @@
     { "src": "^/$", "dest": "/api/render" },
     { "src": "^/render$", "dest": "/api/render" },
 
-    { "src": "^/public/(.*)$", "dest": "https://mrfxxc2vy3ktalj1.public.blob.vercel-storage.com/public/$1" },
-    { "src": "^/assets/(.*)$", "dest": "https://mrfxxc2vy3ktalj1.public.blob.vercel-storage.com/public/assets/$1" },
-    { "src": "^/images/(.*)$", "dest": "https://mrfxxc2vy3ktalj1.public.blob.vercel-storage.com/public/images/$1" },
-    { "src": "^/css/(.*)$", "dest": "https://mrfxxc2vy3ktalj1.public.blob.vercel-storage.com/public/css/$1" },
-    { "src": "^/js/(.*)$", "dest": "https://mrfxxc2vy3ktalj1.public.blob.vercel-storage.com/public/js/$1" },
+    { "src": "^/public/(.*)$", "dest": "/api/index.js" },
+    { "src": "^/assets/(.*)$", "dest": "/api/index.js" },
+    { "src": "^/images/(.*)$", "dest": "/api/index.js" },
+    { "src": "^/css/(.*)$", "dest": "/api/index.js" },
+    { "src": "^/js/(.*)$", "dest": "/api/index.js" },
 
-    { "src": "^/navigations/(.*)$", "dest": "https://mrfxxc2vy3ktalj1.public.blob.vercel-storage.com/public/navigations/$1" },
+    { "src": "^/navigations/(.*)$", "dest": "/api/index.js" },
 
     { "src": "^/api/(.*)$", "dest": "/api/index.js" },
 
