@@ -1,12 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/index.js",  "use": "@vercel/node" },
-    { "src": "api/render.js", "use": "@vercel/node" }
+    { "src": "api/render.js", "use": "@vercel/node", "config": { "includeFiles": "views/**/*.ejs" } },
+    { "src": "api/index.js",  "use": "@vercel/node" }
   ],
-  "functions": {
-    "api/render.js": { "includeFiles": "views/**/*.ejs" }
-  },
   "routes": [
     { "src": "^/$", "dest": "/api/render" },
     { "src": "^/(navigations|assets|images|css|js|public)/.*", "dest": "/api/index.js" },
