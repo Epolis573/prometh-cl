@@ -1,12 +1,9 @@
 {
   "version": 2,
-  "functions": {
-    "api/render.js": {
-      "runtime": "nodejs22.x",
-      "includeFiles": "views/**/*.ejs"
-    }
-  },
-  "rewrites": [
-    { "source": "/", "destination": "/api/render" }
+  "engines" : { 
+    "node" : "20.x" 
+  },  
+  "routes": [
+    { "src": "/(.*)", "destination": "/api/render" }
   ]
 }
