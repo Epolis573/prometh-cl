@@ -6,9 +6,6 @@
       "includeFiles": "views/**/*.ejs"
     }
   },
-  "builds": [
-    { "src": "api/render.js", "use": "@vercel/node" }
-  ],
   "rewrites": [
     { "source": "/", "destination": "/api/render" }
   ]
