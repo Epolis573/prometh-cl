@@ -2152,7 +2152,7 @@
           (img.onload = () => promise.resolve(img)),
           (img.onerror = () =>
             _this.decodeImage(
-              "assets/images/_scenelayout/uv.jpg",
+              "/assets/images/_scenelayout/uv.jpg",
               params,
               promise
             )),
@@ -2170,7 +2170,7 @@
 
       function loadAsset() {
         let path = _assets.splice(_assets.length - 1, 1)[0];
-        const name = path.split("assets/").last().split(".")[0],
+        const name = path.split("/assets/").last().split(".")[0],
           ext = path.split(".").last().split("?")[0].toLowerCase();
         let timeout = Timer.create(timedOut, AssetLoader.TIMEOUT, path);
         if (!Assets.preventCache && ~Assets.__loaded.indexOf(path))
@@ -2261,7 +2261,7 @@
           let module = window._ES5_ ? "es5-modules" : "modules",
             s = document.createElement("script");
           return (
-            (s.src = "assets/js/" + module + ".js?" + window._CACHE_),
+            (s.src = "/assets/js/" + module + ".js?" + window._CACHE_),
             (s.async = !0),
             document.head.appendChild(s),
             AssetLoader.waitForLib("_MODULES_").then((_) => _this.trigger(1))
@@ -8728,7 +8728,7 @@ function styleMap(object) {
         }),
         (DOMTemplate.updateGlobalStyles = function () {
           Utils.debounce(async (_) => {
-            let css = await get(Assets.getPath("assets/css/style-scss.css"));
+            let css = await get(Assets.getPath("/assets/css/style-scss.css"));
             _css ||
               (_css = $(document.head).create("DOMTemplate-hotload", "style")),
               (_css.div.innerHTML = css);
@@ -10713,7 +10713,7 @@ function styleMap(object) {
     },
     () => {
       var _shared;
-      (Thread.PATH = window._THREAD_PATH_ || "assets/js/hydra"),
+      (Thread.PATH = window._THREAD_PATH_ || "/assets/js/hydra"),
         (Thread.UNIQUE_ID = 1),
         (Thread.absolutePath = Hydra.absolutePath),
         (Thread.cluster = function () {
@@ -12079,61 +12079,61 @@ function styleMap(object) {
     })();
   }, "static"),
   (window.ASSETS = [
-    "assets/js/lib/_draco/draco_decoder.js",
-    "assets/js/lib/_draco/draco_decoder.wasm",
-    "assets/js/lib/_draco/draco_wasm_wrapper.js",
-    "assets/js/lib/basis_transcoder.js",
-    "assets/js/lib/basis_transcoder.wasm",
-    "assets/js/lib/firebase-app.js",
-    "assets/js/lib/firebase-auth.js",
-    "assets/js/lib/firebase-database.js",
-    "assets/js/lib/firebase-storage.js",
-    "assets/js/lib/quill.js",
-    "assets/js/lib/video.min.js",
-    "assets/data/bouncingcube-baked.json",
-    "assets/data/test/bouncingcube-baked.json",
-    "assets/data/test/timeline-baked.json",
-    "assets/data/test/toggle_test-baked.json",
-    "assets/data/timeline-baked.json",
-    "assets/data/timeline-ch3caravan_theatre.json",
-    "assets/data/timeline-ch3ending_theatre.json",
-    "assets/data/timeline-ch3endingsplit_theatre.json",
-    "assets/data/timeline-ch3landing_theatre.json",
-    "assets/data/timeline-ch3newlanding_theatre.json",
-    "assets/data/timeline-ch3shipping_theatre.json",
-    "assets/data/uil.1740684676441.json",
-    "assets/shaders/compiled.1740684676441.vs",
+    "/assets/js/lib/_draco/draco_decoder.js",
+    "/assets/js/lib/_draco/draco_decoder.wasm",
+    "/assets/js/lib/_draco/draco_wasm_wrapper.js",
+    "/assets/js/lib/basis_transcoder.js",
+    "/assets/js/lib/basis_transcoder.wasm",
+    "/assets/js/lib/firebase-app.js",
+    "/assets/js/lib/firebase-auth.js",
+    "/assets/js/lib/firebase-database.js",
+    "/assets/js/lib/firebase-storage.js",
+    "/assets/js/lib/quill.js",
+    "/assets/js/lib/video.min.js",
+    "/assets/data/bouncingcube-baked.json",
+    "/assets/data/test/bouncingcube-baked.json",
+    "/assets/data/test/timeline-baked.json",
+    "/assets/data/test/toggle_test-baked.json",
+    "/assets/data/timeline-baked.json",
+    "/assets/data/timeline-ch3caravan_theatre.json",
+    "/assets/data/timeline-ch3ending_theatre.json",
+    "/assets/data/timeline-ch3endingsplit_theatre.json",
+    "/assets/data/timeline-ch3landing_theatre.json",
+    "/assets/data/timeline-ch3newlanding_theatre.json",
+    "/assets/data/timeline-ch3shipping_theatre.json",
+    "/assets/data/uil.1740684676441.json",
+    "/assets/shaders/compiled.1740684676441.vs",
   ]),
   (ASSETS.SW = [
-    "assets/fonts/FuturaLT-Bold.json",
-    "assets/fonts/FuturaLT-Bold.png",
-    "assets/fonts/FuturaLT-Bold.ttf",
-    "assets/fonts/FuturaLT-Book.json",
-    "assets/fonts/FuturaLT-Book.otf",
-    "assets/fonts/FuturaLT-Book.png",
-    "assets/fonts/FuturaLT-Heavy.json",
-    "assets/fonts/FuturaLT-Heavy.png",
-    "assets/fonts/FuturaLT-Heavy.ttf",
-    "assets/fonts/FuturaLT-Light.json",
-    "assets/fonts/FuturaLT-Light.otf",
-    "assets/fonts/FuturaLT-Light.png",
-    "assets/fonts/FuturaLT-Medium.json",
-    "assets/fonts/FuturaLT-Medium.png",
-    "assets/fonts/FuturaLT-Medium.ttf",
-    "assets/fonts/marscondensed-regular-TRIAL.json",
-    "assets/fonts/marscondensed-regular-TRIAL.otf",
-    "assets/fonts/marscondensed-regular-TRIAL.png",
-    "assets/fonts/marscondensedweb-regular-TRIAL.eot",
-    "assets/fonts/marscondensedweb-regular-TRIAL.woff",
-    "assets/fonts/marsextended-regular-TRIAL.json",
-    "assets/fonts/marsextended-regular-TRIAL.otf",
-    "assets/fonts/marsextended-regular-TRIAL.png",
-    "assets/fonts/marsextendedweb-regular-TRIAL.eot",
-    "assets/fonts/marsextendedweb-regular-TRIAL.woff",
-    "assets/css/style-scss.css",
-    "assets/css/style.css",
-    "assets/css/video-js.min.css",
-    "assets/js/app.1740684676441.js",
+    "/assets/fonts/FuturaLT-Bold.json",
+    "/assets/fonts/FuturaLT-Bold.png",
+    "/assets/fonts/FuturaLT-Bold.ttf",
+    "/assets/fonts/FuturaLT-Book.json",
+    "/assets/fonts/FuturaLT-Book.otf",
+    "/assets/fonts/FuturaLT-Book.png",
+    "/assets/fonts/FuturaLT-Heavy.json",
+    "/assets/fonts/FuturaLT-Heavy.png",
+    "/assets/fonts/FuturaLT-Heavy.ttf",
+    "/assets/fonts/FuturaLT-Light.json",
+    "/assets/fonts/FuturaLT-Light.otf",
+    "/assets/fonts/FuturaLT-Light.png",
+    "/assets/fonts/FuturaLT-Medium.json",
+    "/assets/fonts/FuturaLT-Medium.png",
+    "/assets/fonts/FuturaLT-Medium.ttf",
+    "/assets/fonts/marscondensed-regular-TRIAL.json",
+    "/assets/fonts/marscondensed-regular-TRIAL.otf",
+    "/assets/fonts/marscondensed-regular-TRIAL.png",
+    "/assets/fonts/marscondensedweb-regular-TRIAL.eot",
+    "/assets/fonts/marscondensedweb-regular-TRIAL.woff",
+    "/assets/fonts/marsextended-regular-TRIAL.json",
+    "/assets/fonts/marsextended-regular-TRIAL.otf",
+    "/assets/fonts/marsextended-regular-TRIAL.png",
+    "/assets/fonts/marsextendedweb-regular-TRIAL.eot",
+    "/assets/fonts/marsextendedweb-regular-TRIAL.woff",
+    "/assets/css/style-scss.css",
+    "/assets/css/style.css",
+    "/assets/css/video-js.min.css",
+    "/assets/js/app.1740684676441.js",
   ]),
   Class(function Config() {
     Inherit(this, Model);
@@ -13585,7 +13585,7 @@ function styleMap(object) {
             _this.fallback ||
             ((_this.resonanceAudio = !0),
             AssetLoader.loadAssets([
-              "assets/js/lib/_resonance/resonance-audio.min.js",
+              "/assets/js/lib/_resonance/resonance-audio.min.js",
             ]));
       }),
       (this.ready = function () {
@@ -15703,7 +15703,7 @@ function styleMap(object) {
       })(),
       (this.decode = async function (path, params = {}) {
         let fallback = Thread.absolutePath(
-          Assets.getPath("assets/images/_scenelayout/uv.jpg")
+          Assets.getPath("/assets/images/_scenelayout/uv.jpg")
         );
         if (
           ((path = Thread.absolutePath(Assets.getPath(path))),
@@ -15810,8 +15810,8 @@ function styleMap(object) {
     const _this = this;
     var _transcoderReady,
       _basisAssets = [
-        "~assets/js/lib/basis_transcoder.js",
-        "~assets/js/lib/basis_transcoder.wasm",
+        "~/assets/js/lib/basis_transcoder.js",
+        "~/assets/js/lib/basis_transcoder.wasm",
       ]
         .map(Assets.getPath)
         .map(Thread.absolutePath);
@@ -31676,7 +31676,7 @@ Class(function zUtils3D() {
     function loadDracoLib() {
       _dracoLoaded = Promise.create();
       const useJS = "object" != typeof WebAssembly,
-        libFolder = "~assets/js/lib/_draco/",
+        libFolder = "~/assets/js/lib/_draco/",
         libs = useJS
           ? [`${libFolder}draco_decoder.js`]
           : [
@@ -31857,8 +31857,8 @@ Class(function zUtils3D() {
         if (
           (path.includes("http") ||
             (Hydra.LOCAL || (cacheBust = !1),
-            path.includes("assets/geometry/") ||
-              (path = "assets/geometry/" + path),
+            path.includes("/assets/geometry/") ||
+              (path = "/assets/geometry/" + path),
             path.includes(".") || (path += ".json"),
             cacheBust && (path += cacheBust)),
           (path = Thread.absolutePath(Assets.getPath(path))),
@@ -31902,7 +31902,8 @@ Class(function zUtils3D() {
         );
       }),
       (this.removeFromCache = function (path) {
-        path.includes("assets/geometry/") || (path = "assets/geometry/" + path),
+        path.includes("/assets/geometry/") ||
+          (path = "/assets/geometry/" + path),
           path.includes(".") || (path += ".json"),
           (path = Thread.absolutePath(Assets.getPath(path))),
           delete _cache[path],
@@ -32008,7 +32009,8 @@ Class(function zUtils3D() {
       }
       async function createInstanceMesh(json) {
         if (!json) return;
-        json.includes("assets/geometry") || (json = `assets/geometry/${json}`),
+        json.includes("/assets/geometry") ||
+          (json = `/assets/geometry/${json}`),
           json.includes(".json") || (json += ".json"),
           _mesh.cacheGeom && (json += "?" + Utils.timestamp()),
           _mesh.instanceMesh && (_mesh.instanceMesh.visible = !1);
@@ -32056,7 +32058,7 @@ Class(function zUtils3D() {
         (_config = InputUIL.create("im_" + _input.prefix, _group)).addFile(
           "json",
           {
-            relative: "assets/geometry",
+            relative: "/assets/geometry",
           }
         ),
         _config.add("test"),
@@ -32659,11 +32661,11 @@ Class(function zUtils3D() {
             delete MeshBatch.shaders[_shaderKey];
         }),
         (this.loadFromFile = async function (shader, geomFile, instanceFile) {
-          geomFile.includes("assets/geometry") ||
-            (geomFile = "assets/geometry/" + geomFile),
+          geomFile.includes("/assets/geometry") ||
+            (geomFile = "/assets/geometry/" + geomFile),
             geomFile.includes(".json") || (geomFile += ".json"),
-            instanceFile.includes("assets/geometry") ||
-              (instanceFile = "assets/geometry/" + instanceFile),
+            instanceFile.includes("/assets/geometry") ||
+              (instanceFile = "/assets/geometry/" + instanceFile),
             instanceFile.includes(".json") || (instanceFile += ".json");
           let [geom, data] = await Promise.all([
               GeomThread.loadGeometry(Assets.getPath(geomFile)),
@@ -35010,7 +35012,7 @@ Class(function zUtils3D() {
           path =
             mapped && GLTextGeometry.fontPath
               ? GLTextGeometry.fontPath
-              : "assets/fonts/";
+              : "/assets/fonts/";
         return Assets.getPath(
           path + fontName + "." + ext + `?${window._CACHE_ || Date.now()}`
         );
@@ -39518,7 +39520,7 @@ Class(function GLUIStage() {
         throw "HierarchyAnimation :: Second parameter requires callback function to create objects";
       if (
         ("string" == typeof _data &&
-          (_data = await get(Assets.getPath(`assets/geometry/${_data}.json`))),
+          (_data = await get(Assets.getPath(`/assets/geometry/${_data}.json`))),
         (_objects = await createObjects(_data.hierarchy)),
         !Array.isArray(_objects))
       )
@@ -39635,7 +39637,7 @@ Class(function GLUIStage() {
             _config.addTextarea("jsonFiles");
         })(),
         await (async function initFiles() {
-          let path = `assets/geometry/${_config.get("path")}/`,
+          let path = `/assets/geometry/${_config.get("path")}/`,
             files = _config.get("jsonFiles").split("\n"),
             load = files
               .map((f) => path + f + ".json")
@@ -40771,7 +40773,8 @@ Class(function MouseFluid(
         );
       }),
       (this.generatePointCloud = async function (path, textureSize) {
-        path.includes("assets/geometry") || (path = "assets/geometry/" + path),
+        path.includes("/assets/geometry") ||
+          (path = "/assets/geometry/" + path),
           path.includes(".json") || (path += ".json"),
           init();
         let fn = path.includes("generateGrid")
@@ -40807,7 +40810,7 @@ Class(function MouseFluid(
           ((_params = _fragmentShader), (_fragmentShader = _vertexShader)),
         _vertexShader || (_vertexShader = _fragmentShader = "PBR"),
         (function initShader() {
-          let lookup = Utils3D.getLookupTexture("assets/images/pbr/lut.png");
+          let lookup = Utils3D.getLookupTexture("/assets/images/pbr/lut.png");
           (lookup.forcePersist = !0),
             (_this.shader = new Shader(
               _vertexShader,
@@ -55366,7 +55369,7 @@ Class(function MouseFluid(
           input
             .add("name", "hidden")
             .addFile("geometry", {
-              relative: "assets/geometry",
+              relative: "/assets/geometry",
             })
             .addToggle("visible", !0)
             .addToggle("transparent")
@@ -55562,9 +55565,9 @@ Class(function MouseFluid(
         else {
           let texturePath = input.getImage("texture");
           texturePath
-            ? texturePath.includes("assets/images") ||
+            ? texturePath.includes("/assets/images") ||
               (texturePath = _options.rootPath + texturePath)
-            : (texturePath = "assets/images/_scenelayout/uv.jpg"),
+            : (texturePath = "/assets/images/_scenelayout/uv.jpg"),
             (shader = _this.initClass(Shader, shaderName, {
               unique: `Element_${id}_${_name}`,
               customCompile: customCompile,
@@ -56070,7 +56073,7 @@ Class(function MouseFluid(
         (this._getCinemaConfig = async function () {
           let _cinemaConfig = _config.get("Cinema Config").replace(".json", "");
           return await get(
-            Assets.getPath(`assets/geometry/${_cinemaConfig}.json`)
+            Assets.getPath(`/assets/geometry/${_cinemaConfig}.json`)
           );
         }),
         (this._applyCinemaConfig = function (id, params) {
@@ -56081,7 +56084,7 @@ Class(function MouseFluid(
             (params.geometry &&
               folder.params.setValue(
                 "geometry",
-                params.geometry.replace("assets/geometry/", "")
+                params.geometry.replace("/assets/geometry/", "")
               ),
             ["position", "quaternion", "scale"].forEach((transform) => {
               if (params[transform]) {
@@ -56281,12 +56284,12 @@ Class(function MouseFluid(
               (key.includes("geometry") &&
                 ("{" == val.charAt(0) && (val = JSON.parse(val).src),
                 val.includes(".json") || (val += ".json"),
-                val.includes("assets/") || (val = "assets/geometry/" + val),
+                val.includes("/assets/") || (val = "/assets/geometry/" + val),
                 array.push(GeomThread.loadGeometry(val, null, !0))),
               val.includes(".json"))
             )
-              val.includes("assets/") || (val = "assets/geometry/" + val),
-                findMatch(val.split("assets/")[1]) &&
+              val.includes("/assets/") || (val = "/assets/geometry/" + val),
+                findMatch(val.split("/assets/")[1]) &&
                   array.push(fetch(Assets.getPath(val)).catch((e) => {}));
             else if (val.includes("src")) {
               let obj = JSON.parse(val),
@@ -56296,7 +56299,7 @@ Class(function MouseFluid(
                   src1 = src0.split("/");
                 src = src0 + "/" + src1[src1.length - 1] + "-" + ext + ".ktx";
               }
-              findMatch(src.split("assets/")[1]) &&
+              findMatch(src.split("/assets/")[1]) &&
                 array.push(fetch(Assets.getPath(src)).catch((e) => {}));
             }
           }
@@ -57758,7 +57761,7 @@ Class(function MouseFluid(
                     ? parseData(bg)
                     : bg || name
                     ? void 0
-                    : "assets/images/_scenelayout/uv.jpg"
+                    : "/assets/images/_scenelayout/uv.jpg"
                 )
             : $(name || "Layer", parseData(type))),
           ($obj._uil = group),
@@ -58163,7 +58166,7 @@ Class(function MouseFluid(
         }),
         (this._getFigmaConfig = async function () {
           let _figmaConfig = _config.get("Figma Config").replace(".json", "");
-          return await get(Assets.getPath(`assets/data/${_figmaConfig}.json`));
+          return await get(Assets.getPath(`/assets/data/${_figmaConfig}.json`));
         }),
         (this._applyFigmaConfig = function (id, params, $obj) {
           if ("TEXT" === params.type) {
@@ -58230,7 +58233,7 @@ Class(function MouseFluid(
             let fill = params.fills[0];
             if (!fill) return;
             if ("IMAGE" === fill.type)
-              $obj._input.setValue("bg", "assets/images/_scenelayout/uv.jpg");
+              $obj._input.setValue("bg", "/assets/images/_scenelayout/uv.jpg");
             else if ("SOLID" === fill.type) {
               let c = fill.color,
                 color = new Color(c.r, c.g, c.b);
@@ -58289,9 +58292,9 @@ Class(function MouseFluid(
         (StageLayout.helpers = {}),
         (StageLayout.loadFontConfig = async (path, json) => {
           if (!json) {
-            path = path || "assets/data/figma-font.json";
+            path = path || "/assets/data/figma-font.json";
             try {
-              json = await get("assets/data/figma-font.json");
+              json = await get("/assets/data/figma-font.json");
             } catch (e) {
               return;
             }
@@ -59564,7 +59567,7 @@ Class(function MouseFluid(
       let json = config.get("json");
       if (!json) return;
       json.includes("()") && (json = eval(json));
-      let prefix = "assets/data/";
+      let prefix = "/assets/data/";
       json.includes("http") && (prefix = ""),
         await TimelineOSC.load(_name, `${prefix}${json}`),
         _this.flag("loaded", !0),
@@ -61880,7 +61883,7 @@ Class(function MouseFluid(
         nudgeMultiplier: _config.nudgeMultiplier,
       };
       return (
-        (obj.filePath = Assets.getPath(`assets/data/timeline-${_name}.json`)),
+        (obj.filePath = Assets.getPath(`/assets/data/timeline-${_name}.json`)),
         obj.filePath.includes("http") ||
           (obj.filePath = Hydra.absolutePath(obj.filePath)),
         _config.sheets.forEach((sheet) => {
@@ -62000,7 +62003,7 @@ Class(function MouseFluid(
         _input.get("saved"))
       ) {
         let state = await get(
-          Assets.getPath(`assets/data/timeline-${_name}.json`)
+          Assets.getPath(`/assets/data/timeline-${_name}.json`)
         );
         (_project = Theatre.core.getProject(_name, {
           state: state,
@@ -62125,7 +62128,7 @@ Class(function MouseFluid(
   Class(function UILFile(_offline, _path) {
     Inherit(this, Component);
     (this.load = async function () {
-      let path = window.UIL_STATIC_PATH || "assets/data/uil.json";
+      let path = window.UIL_STATIC_PATH || "/assets/data/uil.json";
       try {
         let data = await get(path);
         return "string" == typeof data ? (Hydra.LOCAL ? null : {}) : data;
@@ -62136,19 +62139,19 @@ Class(function MouseFluid(
       (this.save = async function (sessionData, data) {
         if (
           (Dev.writeFile(
-            window.UIL_STATIC_PATH || "assets/data/uil.json",
+            window.UIL_STATIC_PATH || "/assets/data/uil.json",
             data
           ),
           _offline)
         ) {
           let partial = {};
           try {
-            partial = await get("assets/data/uil-partial.json", data);
+            partial = await get("/assets/data/uil-partial.json", data);
             for (let key in sessionData) partial[key] = sessionData[key];
           } catch (e) {
             partial = sessionData;
           }
-          Dev.writeFile("assets/data/uil-partial.json", partial),
+          Dev.writeFile("/assets/data/uil-partial.json", partial),
             Storage.set("uil_update_partial", !0);
         }
       });
@@ -62171,7 +62174,7 @@ Class(function MouseFluid(
 
     function clearOfflineData() {
       Storage.set("uil_update_partial", !1),
-        Dev.writeFile("assets/data/uil-partial.json", {});
+        Dev.writeFile("/assets/data/uil-partial.json", {});
     }
     async function init() {
       _fs && _fs.destroy(),
@@ -62200,7 +62203,7 @@ Class(function MouseFluid(
           )
         )
           return clearOfflineData();
-        let data = await get("assets/data/uil-partial.json");
+        let data = await get("/assets/data/uil-partial.json");
         for (let key in data) _this.set(key, data[key]);
         write(!0, !0), clearOfflineData();
       }
@@ -63626,7 +63629,7 @@ Class(function MouseFluid(
       (_value = {
         src: "",
         relative: "",
-        prefix: "assets/images",
+        prefix: "/assets/images",
         filename: "",
       }),
         ($input.div.value = ""),
@@ -63660,7 +63663,7 @@ Class(function MouseFluid(
         {
           src: "",
           relative: _opts.relative || "",
-          prefix: _opts.prefix || "assets/images",
+          prefix: _opts.prefix || "/assets/images",
           filename: "",
         },
         _opts.value
@@ -65422,7 +65425,7 @@ Class(function MouseFluid(
       SUPERSCRIPT = "⁰¹²³⁴⁵⁶⁷⁸⁹ˢᵗⁿᵈʳʰ".split("");
     async function applyExtraChars() {
       for (let fontName of FONTS) {
-        let path = `assets/fonts/${fontName.split(".")[0]}.json`,
+        let path = `/assets/fonts/${fontName.split(".")[0]}.json`,
           font = await get(path);
         SUBSCRIPT.map((char, i) => addScripts(font, char, SUBSCRIPTMAP[i], i)),
           SUPERSCRIPT.map((char, i) =>
@@ -65883,7 +65886,7 @@ Class(function MouseFluid(
           }),
           await CMS.ready(),
           await Initializer3D.createWorld(),
-          await AssetLoader.loadAssets(["~assets/js/lib/video.min.js"]),
+          await AssetLoader.loadAssets(["~/assets/js/lib/video.min.js"]),
           (function initView() {
             World.instance(),
               $this.add(World.ELEMENT),
@@ -66280,7 +66283,7 @@ Class(function MouseFluid(
               (_shader = _this.initClass(Shader, "InstancedCarPart", {
                 tMap: {
                   value: Utils3D.getTexture(
-                    "assets/images/_scenelayout/uv.jpg"
+                    "/assets/images/_scenelayout/uv.jpg"
                   ),
                 },
                 unique: unique,
@@ -66878,11 +66881,11 @@ Class(function MouseFluid(
           })(),
           (function initAudio() {
             ((_audio = {}).engine = _this.initClass(Audio3D, {
-              src: "assets/audio/engine.mp3",
+              src: "/assets/audio/engine.mp3",
               loop: !1,
             })),
               (_audio["engine-fade"] = _this.initClass(Audio3D, {
-                src: "assets/audio/engine-fade.mp3",
+                src: "/assets/audio/engine-fade.mp3",
                 loop: !1,
                 volume: 0.1,
               }));
@@ -66958,25 +66961,25 @@ Class(function MouseFluid(
                   {
                     tTo: {
                       value: Utils3D.getTexture(
-                        "assets/images/_scenelayout/black.jpg"
+                        "/assets/images/_scenelayout/black.jpg"
                       ),
                       ignoreUIL: !0,
                     },
                     tFrom: {
                       value: Utils3D.getTexture(
-                        "assets/images/_scenelayout/black.jpg"
+                        "/assets/images/_scenelayout/black.jpg"
                       ),
                       ignoreUIL: !0,
                     },
                     tNoise: {
                       value: Utils3D.getRepeatTexture(
-                        "assets/images/noise/dirnoise3.jpg"
+                        "/assets/images/noise/dirnoise3.jpg"
                       ),
                       ignoreUIL: !0,
                     },
                     tGrunge: {
                       value: Utils3D.getRepeatTexture(
-                        "assets/images/noise/grunge.jpg"
+                        "/assets/images/noise/grunge.jpg"
                       ),
                       ignoreUIL: !0,
                     },
@@ -68301,7 +68304,7 @@ Class(function MouseFluid(
               let shader = _this.initClass(Shader, "ChapterCopyShader", {
                 tNoise: {
                   value: Utils3D.getTexture(
-                    "assets/images/noise/dirnoise3.jpg"
+                    "/assets/images/noise/dirnoise3.jpg"
                   ),
                   ignoreUIL: !0,
                 },
@@ -68603,7 +68606,7 @@ Class(function MouseFluid(
                 let shader = _this.initClass(Shader, "ChapterCopyShader", {
                   tNoise: {
                     value: Utils3D.getTexture(
-                      "assets/images/noise/dirnoise3.jpg"
+                      "/assets/images/noise/dirnoise3.jpg"
                     ),
                     ignoreUIL: !0,
                   },
@@ -68995,7 +68998,7 @@ Class(function MouseFluid(
             let $inside = $gl(
               _this.size,
               _this.size,
-              "assets/images/ui/star-circle.png"
+              "/assets/images/ui/star-circle.png"
             );
             ($inside.x = 0.5 * -_this.size),
               ($inside.y = 0.5 * -_this.size),
@@ -69005,7 +69008,7 @@ Class(function MouseFluid(
               (($arrow = $gl(
                 0.4 * _this.size,
                 0.4 * _this.size,
-                "assets/images/ui/down-arrow.png"
+                "/assets/images/ui/down-arrow.png"
               )).x = 0.3 * _this.size),
               ($arrow.y = 0.3 * _this.size),
               ($arrow.textureShader.blending = Shader.ADDITIVE_BLENDING),
@@ -69137,7 +69140,7 @@ Class(function MouseFluid(
             (($icon = $wrapper.create(
               35,
               35,
-              "assets/images/ui/" + (_config?.icon || "molecule") + ".png"
+              "/assets/images/ui/" + (_config?.icon || "molecule") + ".png"
             )).x = -4),
             ($icon.y = _this.height + 12),
             ($icon.textureShader.blending = Shader.ADDITIVE_BLENDING),
@@ -69839,7 +69842,7 @@ Class(function MouseFluid(
           ($bottom = $container.create("bottom")),
           ($desc = $bottom.create("desc")).text(_this.config.description),
           ($button = $bottom.create("button")).bg(
-            "assets/images/ui/right-arrow.png"
+            "/assets/images/ui/right-arrow.png"
           ),
           $button.interact(onButtonHover, onButtonClick, "#", "submit button");
       })(),
@@ -69873,7 +69876,7 @@ Class(function MouseFluid(
             display: "block",
             margin: "auto",
           }),
-          $title.bg("assets/images/textures/grains_3.jpg"),
+          $title.bg("/assets/images/textures/grains_3.jpg"),
           $container.css({
             position: "absolute",
             width: "30vw",
@@ -70153,7 +70156,7 @@ Class(function MouseFluid(
         ($colorbg = $this.create(".colorbg")),
         $colorbg.size("100%").bg(Colors.value.black),
         ($bg = $this.create(".bg")),
-        $bg.size("100%").bg("assets/images/about/stars-repeat.jpg").css({
+        $bg.size("100%").bg("/assets/images/about/stars-repeat.jpg").css({
           backgroundSize: "512px 512px",
           backgroundRepeat: "repeat",
           opacity: 0,
@@ -70172,7 +70175,7 @@ Class(function MouseFluid(
           $logo
             .size(80, 80)
             .center()
-            .bg("assets/images/ui/prometheus-logo.png"),
+            .bg("/assets/images/ui/prometheus-logo.png"),
           $logo
             .css({
               opacity: 0,
@@ -70216,13 +70219,13 @@ Class(function MouseFluid(
               );
           }, 200),
           ($rings2 = $wrapper.inner.create("rings2")),
-          $rings2.svg("assets/images/ui/rings.svg"),
+          $rings2.svg("/assets/images/ui/rings.svg"),
           $rings2.css({
             width: "100%",
             height: "100%",
           }),
           ($rings = $wrapper.inner.create("rings")),
-          $rings.svg("assets/images/ui/rings.svg"),
+          $rings.svg("/assets/images/ui/rings.svg"),
           $rings.css({
             width: "100%",
             height: "100%",
@@ -70428,7 +70431,7 @@ Class(function MouseFluid(
                     let shader = _this.initClass(Shader, "MenuItemShader", {
                       tNoise: {
                         value: Utils3D.getTexture(
-                          "assets/images/noise/dirnoise3.jpg"
+                          "/assets/images/noise/dirnoise3.jpg"
                         ),
                         ignoreUIL: !0,
                       },
@@ -70703,7 +70706,7 @@ Class(function MouseFluid(
                 class="Social_Link"
               >
                 <img
-                  src="assets/images/icons/facebook.png"
+                  src="/assets/images/icons/facebook.png"
                   alt="Prometheus Facebook"
                   class="Social_Facebook_Img"
                 />
@@ -70718,7 +70721,7 @@ Class(function MouseFluid(
                 class="Social_Link"
               >
                 <img
-                  src="assets/images/icons/instagram.png"
+                  src="/assets/images/icons/instagram.png"
                   alt="Prometheus Instagram"
                   class="Social_Instagram_Img"
                 />
@@ -70733,7 +70736,7 @@ Class(function MouseFluid(
                 class="Social_Link"
               >
                 <img
-                  src="assets/images/icons/twitter.png"
+                  src="/assets/images/icons/twitter.png"
                   alt="Prometheus Twitter"
                   class="Social_Twitter_Img"
                 />
@@ -70791,22 +70794,22 @@ Class(function MouseFluid(
     var $container;
     const SOCIAL_ITEMS = [
       {
-        image: "assets/images/icons/twitter.png",
+        image: "/assets/images/icons/twitter.png",
         path: "",
         label: "Twitter",
       },
       {
-        image: "assets/images/icons/linkedin.png",
+        image: "/assets/images/icons/linkedin.png",
         path: "",
         label: "LinkedIn",
       },
       {
-        image: "assets/images/icons/instagram.png",
+        image: "/assets/images/icons/instagram.png",
         path: "",
         label: "Instagram",
       },
       {
-        image: "assets/images/icons/facebook.png",
+        image: "/assets/images/icons/facebook.png",
         path: "https://www.facebook.com/Latte2dx/",
         label: "Facebook",
       },
@@ -71114,7 +71117,7 @@ Class(function MouseFluid(
           <div class="Top">
             <div class="Logo">
               <img
-                src="assets/images/test/prometheus-logo.png"
+                src="/assets/images/test/prometheus-logo.png"
                 @click="${onLogoClick}"
               />
             </div>
@@ -71423,7 +71426,7 @@ Class(function MouseFluid(
                   shader = _this.initClass(Shader, "MenuItemShader", {
                     tNoise: {
                       value: Utils3D.getTexture(
-                        "assets/images/noise/dirnoise_basecolor.png"
+                        "/assets/images/noise/dirnoise_basecolor.png"
                       ),
                       ignoreUIL: !0,
                     },
@@ -71866,7 +71869,7 @@ Class(function MouseFluid(
           $wordmark.css({
             top: Device.mobile.phone ? -9 : -10,
             left: 5,
-            backgroundImage: "url(assets/images/ui/prometheus_wordmark.png)",
+            backgroundImage: "url(/assets/images/ui/prometheus_wordmark.png)",
             backgroundRepeat: "no-repeat",
           }),
           $wordmark.interact(
@@ -71881,8 +71884,8 @@ Class(function MouseFluid(
             .size(logoSize, logoSize)
             .css(logoCSS),
           $logo.css({
-            "-webkit-mask": "url(assets/images/ui/logo.svg) no-repeat center",
-            mask: "url(assets/images/ui/logo.svg) no-repeat center contain",
+            "-webkit-mask": "url(/assets/images/ui/logo.svg) no-repeat center",
+            mask: "url(/assets/images/ui/logo.svg) no-repeat center contain",
             maskSize: "contain",
           }),
           $logo.interact(
@@ -72048,19 +72051,19 @@ Class(function MouseFluid(
     const _this = this,
       DATA = [
         {
-          image: "assets/images/ui/chapter1.jpg",
+          image: "/assets/images/ui/chapter1.jpg",
           subtitle: "CHAPTER 1",
           title: CMS.get("chapters.chapter-1.title"),
           path: "chapter1",
         },
         {
-          image: "assets/images/ui/chapter2.jpg",
+          image: "/assets/images/ui/chapter2.jpg",
           subtitle: "CHAPTER 2",
           title: CMS.get("chapters.chapter-2.title"),
           path: "chapter2",
         },
         {
-          image: "assets/images/ui/chapter3.jpg",
+          image: "/assets/images/ui/chapter3.jpg",
           subtitle: "CHAPTER 3",
           title: CMS.get("chapters.chapter-3.title"),
           path: "chapter3",
@@ -72277,7 +72280,7 @@ Class(function MouseFluid(
     function initText({ text: text, size: size, color: color }) {
       let shader = _this.initClass(Shader, "MenuItemShader", {
           tNoise: {
-            value: Utils3D.getTexture("assets/images/noise/dirnoise3.jpg"),
+            value: Utils3D.getTexture("/assets/images/noise/dirnoise3.jpg"),
             ignoreUIL: !0,
           },
           uTimeScale: {
@@ -72379,21 +72382,21 @@ Class(function MouseFluid(
     const _this = this,
       DATA = [
         {
-          image: "assets/images/ui/chapter1.jpg",
+          image: "/assets/images/ui/chapter1.jpg",
           subtitle: "CHAPTER 1",
           title: CMS.get("chapters.chapter-1.title"),
           path: "chapter1",
           badge: CMS.get("chapters.chapter-1.new"),
         },
         {
-          image: "assets/images/ui/chapter2.jpg",
+          image: "/assets/images/ui/chapter2.jpg",
           subtitle: "CHAPTER 2",
           title: CMS.get("chapters.chapter-2.title"),
           path: "chapter2",
           badge: CMS.get("chapters.chapter-2.new"),
         },
         {
-          image: "assets/images/ui/chapter3.jpg",
+          image: "/assets/images/ui/chapter3.jpg",
           subtitle: "CHAPTER 3",
           title: CMS.get("chapters.chapter-3.title"),
           path: "chapter3",
@@ -72669,7 +72672,7 @@ Class(function MouseFluid(
         ($bg = $gl(
           42,
           42,
-          Utils3D.getTexture("/assets/images/ui/badge-star-texture.png")
+          Utils3D.getTexture("//assets/images/ui/badge-star-texture.png")
         )).enable3D(),
           $bg.setZ(2),
           ($bg.x = 21),
@@ -72694,21 +72697,21 @@ Class(function MouseFluid(
       _totalHeight = 0;
     const DATA = [
       {
-        image: "assets/images/ui/chapter1.jpg",
+        image: "/assets/images/ui/chapter1.jpg",
         subtitle: "CHAPTER   1",
         title: CMS.get("chapters.chapter-1.title"),
         path: "chapter1",
         badge: CMS.get("chapters.chapter-1.new"),
       },
       {
-        image: "assets/images/ui/chapter2.jpg",
+        image: "/assets/images/ui/chapter2.jpg",
         subtitle: "CHAPTER   2",
         title: CMS.get("chapters.chapter-2.title"),
         path: "chapter2",
         badge: CMS.get("chapters.chapter-2.new"),
       },
       {
-        image: "assets/images/ui/chapter3.jpg",
+        image: "/assets/images/ui/chapter3.jpg",
         subtitle: "CHAPTER   3",
         title: CMS.get("chapters.chapter-3.title"),
         path: "chapter3",
@@ -72871,9 +72874,9 @@ Class(function MouseFluid(
         switch (
           ((_videoTexture = _this.initClass(
             VideoTexture,
-            `assets/videos/${_data.video}.mp4`,
+            `/assets/videos/${_data.video}.mp4`,
             {
-              firstFrame: `assets/videos/${_data.video}.jpg`,
+              firstFrame: `/assets/videos/${_data.video}.jpg`,
               autoplay: !1,
             }
           )),
@@ -72918,7 +72921,7 @@ Class(function MouseFluid(
             value: new Vector2(2, 1),
           },
           tNoise: {
-            value: Utils3D.getTexture("assets/images/noise/dirnoise3.jpg"),
+            value: Utils3D.getTexture("/assets/images/noise/dirnoise3.jpg"),
           },
         })),
           $bg.useShader(_shader),
@@ -73183,7 +73186,7 @@ Class(function MouseFluid(
         });
       }),
       (this.style = function () {
-        return "\n        @font-face {\n            font-family: 'marscondensed-regular-TRIAL';\n            src: url('../fonts/marscondensed-regular-TRIAL.otf') format('opentype');\n            font-weight: 400;\n            font-style: bold;\n        }\n        @font-face {\n            font-family: 'FuturaLT-Bold';\n            src: url('../fonts/FuturaLT-Bold.ttf') format('truetype');\n            font-weight: 600;\n            font-style: normal;\n        }\n        @font-face {\n            font-family: 'FuturaLT-Medium';\n            src: url('../fonts/FuturaLT-Medium.ttf') format('truetype');\n            font-weight: 400;\n            font-style: normal;\n        }\n\n        #Stage, #Stage * {\n            .NewsPage {\n                overflow: hidden;\n            }\n            .NewsPageUI, {\n                width: 100%;\n                position: relative;\n                display: inline-block;\n                * {\n                    position: relative;\n                }\n            }\n            .NewsPageUI_Wrapper {\n                display: inline-block;\n                position: relative;\n                background-color: #161616;\n                &:before {\n                    content: '';\n                    position: absolute;\n                    top: 0;\n                    left: 0;\n                    width: 100%;\n                    height: 100%;\n                    background-image: url('../assets/images/textures/grains.png');\n                    background-size: contain;\n                    filter: brightness(4.75);\n                    transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 150ms;\n                }\n            }\n            .News {\n                position: relative;\n                width: 100%;\n            }\n            .News_Header {\n                font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                font-size: 12rem;\n                color: #E74833;\n                text-align: center;\n                margin: 5rem auto;\n                position: relative;\n                z-index: 0;\n                width: calc(66% + 20rem);\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 150ms;\n            }\n            .News_Article_Title_Header {\n                font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                font-size: 12rem;\n                color: #FDF0E1;\n                text-align: center;\n                text-transform: uppercase;\n                line-height: 10rem;\n                z-index: 2;\n                opacity: 0;\n                width: 80vw;\n                transform: translateY(-200%);\n                // margin: calc(2.5% + 1.25rem) auto 0;\n                // padding: calc(2.5% + 1.25rem) 0 0;\n                padding: 150px 0 0;\n                margin: 0 auto 4.5rem auto;\n                // background: url('../images/textures/grains_2.jpg');\n                background: url('../assets/images/textures/grains_2.jpg');\n                background-size: cover;\n                -webkit-background-clip: text;\n                background-clip: text;\n                color: transparent;\n                top: 0;\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            }\n            \n            .News_Article_Date_Header {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                text-align: center;\n                font-size: 1.4rem;\n                color: #FDF0E1;\n                text-transform: uppercase;\n                z-index: 2;\n                opacity: 0;\n                width: calc((100vw / 3) * 2 + 8rem);\n                transform: translateY(-200%);\n                margin: calc(2.5% + 2rem) auto 2rem;\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            }\n            .News_Articles {\n                width: calc((100% / 3) * 2 + 10rem);\n                margin: auto;\n                position: relative;\n                display: flex;\n                flex-wrap: wrap;\n                justify-content: space-between;\n            }\n            .News_Article_Wrapper {\n                position: relative;\n                z-index: 0;\n                width: calc(((100vw / 3) * 2) / 2);\n                height: calc(((((100vw / 3) * 2) / 2 + 3rem) * 0.627) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                // height: calc((30rem + 3rem) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                margin-bottom: 6rem;\n                transition: opacity 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 100ms;\n            }\n            .News_Article_Wrapper.News_Article_Featured {\n                // height: calc((60rem + 3rem) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                height: calc(((((100vw / 3) * 2 + 10rem) * 0.627) + 3rem) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                margin-bottom: 2.5rem;\n            }\n            .News_Article_Featured {\n                width: 100%;\n                .News_Article {\n                    width: 100%;\n                }\n                .News_Article_Content {\n                    width: 100%;\n                }\n                .News_Article_Img {\n                    // width: 100%;\n                    // height: 60rem;\n                    height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                    width: calc((100vw / 3) * 2 + 10rem);\n                    border-radius: 1.5rem;\n                }\n                .News_Article_Content_Wrapper {\n                    // top: 63rem;\n                    top: calc((((100vw / 3) * 2 + 10rem) * 0.627) + 3rem);\n                }\n            }\n            .News_Article {\n                position: relative;\n                display: flex;\n                flex-direction: column;\n                width: calc(((100vw / 3) * 2) / 2);\n                height: 100%;\n                cursor: pointer;\n                text-decoration: none;\n                &:hover {\n                    .News_Article_Img {\n                        // border: 2px solid #E74833;\n                        box-shadow: 0px 0px 0px 2px #E74833;\n                        filter: brightness(1) sepia(0) grayscale(0) contrast(1.0);\n                    }\n                    // .News_Article_Img_Thumb {\n                    //     opacity: 0;\n                    // }\n                }\n                &:focus {\n                    outline: auto;\n                    .News_Article_Img {\n                        filter: brightness(1.0) sepia(0.0) grayscale(0) contrast(1.0);\n                    }\n                }\n            }\n\n            .News_Article_Featured .News_Article_Img {\n                filter: brightness(0.85) sepia(0) grayscale(0) contrast(1.02);\n            }\n\n            \n            \n            .News_Article_Img {\n                position: absolute;\n                background-size: cover;\n                background-position: center;\n                background-repeat: no-repeat;\n                overflow: hidden;\n                // width: calc(((100vw / 3) * 2) / 2);\n                // height: 30rem;\n                width: calc(((100vw / 3) * 2) / 2);\n                height: calc((((100vw / 3) * 2) / 2) * 0.627);\n                // height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                // width: calc((100vw / 3) * 2 + 10rem);\n                border-radius: 1.2rem;\n                margin-bottom: 3rem;\n                // border: 2px solid #FDF0E1;\n                box-shadow: 0px 0px 0px 2px #FDF0E1;\n                filter: brightness(0.5) sepia(1.0) grayscale(0.30) contrast(1.25);\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), filter 150ms ease-out;\n            }\n            .News_Article_Img_Thumb {\n                background-position: center;\n                background-size: cover;\n                background-repeat: no-repeat;\n                width: 100%;\n                height: 100%;\n                border-radius: 1.2rem;\n                display: flex;\n                opacity: 1;\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                // transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            } \n            .News_Article_Content_Wrapper {\n                width: 100%;\n                position: relative;\n                // top: 33rem;\n                top: calc(((((100vw / 3) * 2) / 2 + 3rem) * 0.627));\n            }\n            .News_Article_Content {\n                position: absolute;\n                width: calc(((100vw / 3) * 2) / 2);\n                opacity: 1;\n                transition: opacity 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            }\n            .News_Article_Title {\n                font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                font-size: 4rem;\n                line-height: 3.4rem;\n                color: #FDF0E1;\n                text-align: left;\n                text-transform: uppercase;\n                margin-bottom: 3rem;\n                display: -webkit-box;\n                -webkit-line-clamp: 3;\n                -webkit-box-orient: vertical;\n                overflow: hidden;\n                margin-top: 0;\n                text-overflow: ellipsis;\n                width: 100%;\n\n                @media screen and (max-width: 800px) {\n                    -webkit-line-clamp: 2;\n                }\n            }\n            .News_Article_Title.minHeight {\n                min-height: 10rem;\n            }\n            .News_Article_Date {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                font-size: 1.4rem;\n                color: #FDF0E1;\n                text-align: left;\n                // text-align: center;\n                width: 100%;\n                text-transform: uppercase;\n                height: 1.7rem;\n                margin-bottom: 2rem;\n                // opacity: 0;\n                // top: 66rem;\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000)\n            }\n            .News_Article_Date_Clone {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                font-size: 1.4rem;\n                color: #FDF0E1;\n                text-align: left;\n                text-align: center;\n                width: 100%;\n                text-transform: uppercase;\n                height: 1.7rem;\n                margin-bottom: 2rem;\n                opacity: 0;\n                top: 66rem;\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000)\n            }\n            .News_Article_Line {\n                width: 100%;\n                height: 1px;\n                background-color: #E74833;\n            }\n            .News_Article_Line.fixedHeight {\n                position: absolute;\n                top: 17rem;\n            }\n            .News_Article_HTML {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                font-size: 1.8rem;\n                line-height: 2.4rem;\n                // font-size: 1.4rem;\n                // line-height: 2rem;\n                color: #FDF0E1;\n                position: relative;\n                top: 60rem;\n                left: 50%;\n                z-index: 2;\n                opacity: 0;\n                width: 50vw;\n                transform: translateX(-50%);\n                transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                iframe {\n                    padding: 5rem 0;\n                    margin: 0 auto;\n                    width: 100%;\n                }\n                ul {\n                    padding: 0 4rem;\n                }\n                blockquote {\n                    font-size: 4rem;\n                    font-family: \"marscondensed-regular-TRIAL\", sans-serif;\n                    line-height: 3.5rem;\n                    text-transform: uppercase;\n                    padding: 4rem 0;\n                    border-top: 1px #FDF0E1 solid;\n                    border-bottom: 1px #FDF0E1 solid;\n                    padding: 4rem 0;\n                    margin: 0 auto;\n                }\n                a {\n                    font-weight: bold;\n                    color: #FDF0E1 !important;\n                    text-decoration: none;\n                    border-bottom: 1px #E74833 solid;\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &:hover {\n                        opacity: 0.5;\n                    }\n                }\n                img {\n                    max-height: 40rem;\n                    max-width: 100%;\n                    padding: 4rem 0;\n                    margin: 0 auto;\n                    text-align: center;\n                    display: flex;\n                }\n            }\n            // .News_Article_Clone_Close {\n            //     width: 5rem;\n            //     height: 5rem;\n            //     margin: 0 auto;\n            //     display: flex;\n            //     justify-content: center;\n            //     align-items: center;\n            //     position: relative;\n            //     padding: calc(2.5% + 5rem) 0 0;\n            //     // padding: calc(2.5% + 10rem) 0 0;\n            //     opacity: 0;\n            //     transform: translateY(-10rem);\n            //     transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 100ms;\n            //     &__L1 {\n            //         height: 2px;\n            //         background-color: #FDF0E1;\n            //         width: 100%;\n            //         position: absolute;\n            //         top: 50%;\n            //         left: 50%;\n            //         transform-origin: left;\n            //         transform: rotate(45deg) translate(-50%, -50%);\n            //     }\n            //     &__L2 {\n            //         height: 2px;\n            //         background-color: #FDF0E1;\n            //         width: 100%;\n            //         position: absolute;\n            //         top: 50%;\n            //         left: 50%;\n            //         transform-origin: left;\n            //         transform: rotate(-45deg) translate(-50%, -50%);\n            //     }\n            // }\n            .NewsPageUI_Wrapper_ACTIVE {\n                &:before {\n                    opacity: 0;\n                }\n                // .News_Article_Clone_Close {\n                //     opacity: 1;\n                //     transform: translateY(0);\n                // }\n                .News_Header {\n                    opacity: 0;\n                    transform: translateY(125%);\n                    transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                }\n                .News_Article_ACTIVE {\n                    .News_Article_Img {\n                        visibility: hidden;\n                    }\n                }\n                .News_Article_Clone_Wrapper {\n                    position: fixed;\n                    top: 0;\n                    left: 0;\n                    width: 100%;\n                    height: 100vh;\n                    .News_Article_Img {\n                        visibility: initial;\n                        transform: translateX(0%);\n                    }\n                }\n                .News_Article_Date_Header {\n                    opacity: 1;\n                    margin: calc(2.5% + 10rem) auto 2rem;\n                    transform: translateY(0%);\n                }\n                .News_Article_Title_Header {\n                    opacity: 1;\n                    transform: translateY(0%);\n                }\n                .News_Article_Img {\n                    // border: 2px solid #E74833 !important;\n                    box-shadow: 0px 0px 0px 2px #E74833 !important;;\n                    filter: brightness(1) sepia(0) grayscale(0) contrast(1.0) !important;\n                }\n                .News_Article_Img_Thumb {\n                    opacity: 0;\n                    // transition: initial;\n                }\n                // .News_Article_Date {\n                //     opacity: 1;\n                // }\n                .News_Article_Date_Clone {\n                    opacity: 1;\n                }\n                .News_Article_HTML {\n                    opacity: 1;\n                    top: 70.8rem;\n                    transition: all 1000ms cubic-bezier(0.455, 0.030, 0.515, 0.955);\n                }\n                // .News_Article_Icon_Wrapper {\n                //     visibility: initial;\n                // }\n                // .News_Article_Icon {\n                //     opacity: 1;\n                // }\n            }\n            .News_Article_HIDE {\n                opacity: 0;\n                transition: opacity 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 0ms;\n            }\n            .News_Article_Clone {\n                position: relative;\n                // top: 150px;\n                width: 100%;\n            }\n            .News_Article_Clone_ACTIVE {\n                .News_Article_Img {\n                    transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), width 1000ms cubic-bezier(0.455, 0.030, 0.515, 0.955);\n                }\n            }\n            .News_Article_Clone_ACTIVE_V2 {\n                .News_Article_Img {\n                    // height: 60rem;\n                    height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                    // width: calc((100vw / 3) * 2 + 10rem);\n                    width: calc((100vw / 3) * 2 + 10rem) !important;\n                    left: calc(50% - ((100vw / 3) * 2 + 10rem) / 2) !important;\n                    transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), width 1000ms cubic-bezier(0.455, 0.030, 0.515, 0.955), height 0ms;\n                }\n            }\n            .News_Article_Clone_ANIMATE_ACTIVE {\n                // height: 60rem !important;\n                height: calc(((100vw / 3) * 2 + 10rem) * 0.627) !important;\n                top: 0 !important;\n                left: 50% !important;\n                width: calc((100% / 3) * 2 + 10rem) !important;\n                margin: -2rem auto 10rem;\n                transform: translateX(-50%) !important;\n            }\n            .News_Article_Clone_ANIMATE_ACTIVE_V2 {\n                top: 0 !important;\n                margin: -2rem auto 10rem;\n            }\n            // .News_Article_Icon_Wrapper {\n            //     width: calc((100% / 3) * 2 + 10rem);\n            //     margin: 0 auto;\n            //     visibility: hidden;\n            //     z-index: 1;\n            // }\n            // .News_Article_Icon {\n            //     opacity: 0;\n            //     width: 20rem;\n            //     height: 20rem;\n            //     background-image: url('../images/icons/cta-scroll.svg');\n            //     position: absolute;\n            //     right: -17rem;\n            //     top: 42rem;\n            //     transition: all 700ms cubic-bezier(0.455, 0.03, 0.515, 0.955) 300ms;\n            // }\n\n            .NewsPage_ACTIVE {\n                overflow: initial !important;\n                .News_Article_Clone {\n                    background-color: #161616;\n                }\n            }\n            \n            @media screen and (max-width: 960px) {\n                .News_Article_Title_Header {\n                    font-size: 8rem;\n                    line-height: 7rem;\n                }\n            }\n\n            @media screen and (max-width: 600px) {\n                .News_Article_Clone {\n                    top: 100px;\n                }\n                .News_Header {\n                    font-size: 6rem;\n                    width: 100%;\n                    margin: 10rem 0 5rem;\n                }\n                .NewsPageUI_Wrapper {\n                    width: 100%;\n                }\n                .News_Articles {\n                    width: calc(100% - 5rem);\n                }\n                .News_Article_Wrapper {\n                    width: 100%;\n                    height: calc((20rem + 3rem) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                }\n                .News_Article {\n                    width: 100%;\n                }\n                .News_Article_Wrapper.News_Article_Featured {\n                    height: calc((20rem + 3rem) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                }\n                .News_Article_Featured {\n                    .News_Article_Img {\n                        // height: 20rem;\n                        width: calc(100vw - 5rem);\n                        height: calc((100vw - 5rem) * 0.627);\n                    }\n                    .News_Article_Content_Wrapper {\n                        top: 23rem;\n                    }\n                }\n                .News_Article_Content_Wrapper {\n                    top: 23rem;\n                }\n                .News_Article_Img {\n                    // width: 100%;\n                    // height: 20rem;\n                    // width: calc(100vw - 5rem);\n                    height: calc((100vw - 5rem) * 0.627);\n                    width: calc(100vw - 5rem) !important;\n                    left: calc(50% - (100vw - 5rem) / 2) !important;\n                }\n                .News_Article_Content {\n                    width: 100%;\n                }\n                .News_Article_Title_Header {\n                    font-size: 6rem;\n                    line-height: 5rem;\n                    padding: 0;\n                }\n                // .News_Article_Clone_Close {\n                //     visibility: hidden;\n                // }\n                .News_Article_Clone_ANIMATE_ACTIVE_V2.News_Article_Img {\n                    // height: 20rem ;\n                    // height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                    height: calc((100vw - 5rem)*.627);\n                    // width: calc((100vw / 3) * 2 + 10rem);\n                    // width: calc(100% - 5rem)!important;\n                    width: calc(100vw - 5rem) !important;\n                    left: calc(50% - (100vw - 5rem) / 2) !important;\n                    transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), width 0ms, height 0ms, left 0ms,;\n                }\n                .News_Article_Clone_ANIMATE_ACTIVE {\n                    height: 20rem !important;\n                    top: 0 !important;\n                    left: 50% !important;\n                    width: calc(100% - 5rem)!important;\n                    transform: translateX(-50%) !important;\n                }\n                // .News_Article_Date {\n                //     top: 35rem;\n                // }\n                .News_Article_HTML {\n                    // top: 5rem;\n                    top: 40rem;\n                }\n                .NewsPageUI_Wrapper_ACTIVE {\n                    // .News_Article_Date {\n                    //     // top: 25rem;\n                    //     top: calc(((100vw / 3) * 2 + 10rem) * 0.627 + 5rem);\n                    // }\n                    .News_Article_Date_Clone {\n                        // top: 25rem;\n                        top: calc(((100vw / 3) * 2 + 10rem) * 0.627 + 5rem);\n                    }\n                    .News_Article_HTML {\n                        position: relative;\n                        // top: 0rem;\n                        // top: 30rem;\n                        top: calc(((100vw / 3) * 2 + 10rem) * 0.627 + 10rem);\n                        // padding: 25rem 0 20rem;\n                        width: calc(100% - 5rem);\n                        transition: all 1000ms cubic-bezier(0.455, 0.03, 0.515, 0.955), width 0ms;\n                    }\n                    .News_Article_Clone_Wrapper {\n                        top: 0 !important;\n                    }\n                    // .News_Article_Icon_Wrapper {\n                    //     visibility: hidden;\n                    // }\n                }\n            }            \n        }        \n        ";
+        return "\n        @font-face {\n            font-family: 'marscondensed-regular-TRIAL';\n            src: url('../fonts/marscondensed-regular-TRIAL.otf') format('opentype');\n            font-weight: 400;\n            font-style: bold;\n        }\n        @font-face {\n            font-family: 'FuturaLT-Bold';\n            src: url('../fonts/FuturaLT-Bold.ttf') format('truetype');\n            font-weight: 600;\n            font-style: normal;\n        }\n        @font-face {\n            font-family: 'FuturaLT-Medium';\n            src: url('../fonts/FuturaLT-Medium.ttf') format('truetype');\n            font-weight: 400;\n            font-style: normal;\n        }\n\n        #Stage, #Stage * {\n            .NewsPage {\n                overflow: hidden;\n            }\n            .NewsPageUI, {\n                width: 100%;\n                position: relative;\n                display: inline-block;\n                * {\n                    position: relative;\n                }\n            }\n            .NewsPageUI_Wrapper {\n                display: inline-block;\n                position: relative;\n                background-color: #161616;\n                &:before {\n                    content: '';\n                    position: absolute;\n                    top: 0;\n                    left: 0;\n                    width: 100%;\n                    height: 100%;\n                    background-image: url('..//assets/images/textures/grains.png');\n                    background-size: contain;\n                    filter: brightness(4.75);\n                    transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 150ms;\n                }\n            }\n            .News {\n                position: relative;\n                width: 100%;\n            }\n            .News_Header {\n                font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                font-size: 12rem;\n                color: #E74833;\n                text-align: center;\n                margin: 5rem auto;\n                position: relative;\n                z-index: 0;\n                width: calc(66% + 20rem);\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 150ms;\n            }\n            .News_Article_Title_Header {\n                font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                font-size: 12rem;\n                color: #FDF0E1;\n                text-align: center;\n                text-transform: uppercase;\n                line-height: 10rem;\n                z-index: 2;\n                opacity: 0;\n                width: 80vw;\n                transform: translateY(-200%);\n                // margin: calc(2.5% + 1.25rem) auto 0;\n                // padding: calc(2.5% + 1.25rem) 0 0;\n                padding: 150px 0 0;\n                margin: 0 auto 4.5rem auto;\n                // background: url('../images/textures/grains_2.jpg');\n                background: url('..//assets/images/textures/grains_2.jpg');\n                background-size: cover;\n                -webkit-background-clip: text;\n                background-clip: text;\n                color: transparent;\n                top: 0;\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            }\n            \n            .News_Article_Date_Header {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                text-align: center;\n                font-size: 1.4rem;\n                color: #FDF0E1;\n                text-transform: uppercase;\n                z-index: 2;\n                opacity: 0;\n                width: calc((100vw / 3) * 2 + 8rem);\n                transform: translateY(-200%);\n                margin: calc(2.5% + 2rem) auto 2rem;\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            }\n            .News_Articles {\n                width: calc((100% / 3) * 2 + 10rem);\n                margin: auto;\n                position: relative;\n                display: flex;\n                flex-wrap: wrap;\n                justify-content: space-between;\n            }\n            .News_Article_Wrapper {\n                position: relative;\n                z-index: 0;\n                width: calc(((100vw / 3) * 2) / 2);\n                height: calc(((((100vw / 3) * 2) / 2 + 3rem) * 0.627) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                // height: calc((30rem + 3rem) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                margin-bottom: 6rem;\n                transition: opacity 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 100ms;\n            }\n            .News_Article_Wrapper.News_Article_Featured {\n                // height: calc((60rem + 3rem) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                height: calc(((((100vw / 3) * 2 + 10rem) * 0.627) + 3rem) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                margin-bottom: 2.5rem;\n            }\n            .News_Article_Featured {\n                width: 100%;\n                .News_Article {\n                    width: 100%;\n                }\n                .News_Article_Content {\n                    width: 100%;\n                }\n                .News_Article_Img {\n                    // width: 100%;\n                    // height: 60rem;\n                    height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                    width: calc((100vw / 3) * 2 + 10rem);\n                    border-radius: 1.5rem;\n                }\n                .News_Article_Content_Wrapper {\n                    // top: 63rem;\n                    top: calc((((100vw / 3) * 2 + 10rem) * 0.627) + 3rem);\n                }\n            }\n            .News_Article {\n                position: relative;\n                display: flex;\n                flex-direction: column;\n                width: calc(((100vw / 3) * 2) / 2);\n                height: 100%;\n                cursor: pointer;\n                text-decoration: none;\n                &:hover {\n                    .News_Article_Img {\n                        // border: 2px solid #E74833;\n                        box-shadow: 0px 0px 0px 2px #E74833;\n                        filter: brightness(1) sepia(0) grayscale(0) contrast(1.0);\n                    }\n                    // .News_Article_Img_Thumb {\n                    //     opacity: 0;\n                    // }\n                }\n                &:focus {\n                    outline: auto;\n                    .News_Article_Img {\n                        filter: brightness(1.0) sepia(0.0) grayscale(0) contrast(1.0);\n                    }\n                }\n            }\n\n            .News_Article_Featured .News_Article_Img {\n                filter: brightness(0.85) sepia(0) grayscale(0) contrast(1.02);\n            }\n\n            \n            \n            .News_Article_Img {\n                position: absolute;\n                background-size: cover;\n                background-position: center;\n                background-repeat: no-repeat;\n                overflow: hidden;\n                // width: calc(((100vw / 3) * 2) / 2);\n                // height: 30rem;\n                width: calc(((100vw / 3) * 2) / 2);\n                height: calc((((100vw / 3) * 2) / 2) * 0.627);\n                // height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                // width: calc((100vw / 3) * 2 + 10rem);\n                border-radius: 1.2rem;\n                margin-bottom: 3rem;\n                // border: 2px solid #FDF0E1;\n                box-shadow: 0px 0px 0px 2px #FDF0E1;\n                filter: brightness(0.5) sepia(1.0) grayscale(0.30) contrast(1.25);\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), filter 150ms ease-out;\n            }\n            .News_Article_Img_Thumb {\n                background-position: center;\n                background-size: cover;\n                background-repeat: no-repeat;\n                width: 100%;\n                height: 100%;\n                border-radius: 1.2rem;\n                display: flex;\n                opacity: 1;\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                // transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            } \n            .News_Article_Content_Wrapper {\n                width: 100%;\n                position: relative;\n                // top: 33rem;\n                top: calc(((((100vw / 3) * 2) / 2 + 3rem) * 0.627));\n            }\n            .News_Article_Content {\n                position: absolute;\n                width: calc(((100vw / 3) * 2) / 2);\n                opacity: 1;\n                transition: opacity 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            }\n            .News_Article_Title {\n                font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                font-size: 4rem;\n                line-height: 3.4rem;\n                color: #FDF0E1;\n                text-align: left;\n                text-transform: uppercase;\n                margin-bottom: 3rem;\n                display: -webkit-box;\n                -webkit-line-clamp: 3;\n                -webkit-box-orient: vertical;\n                overflow: hidden;\n                margin-top: 0;\n                text-overflow: ellipsis;\n                width: 100%;\n\n                @media screen and (max-width: 800px) {\n                    -webkit-line-clamp: 2;\n                }\n            }\n            .News_Article_Title.minHeight {\n                min-height: 10rem;\n            }\n            .News_Article_Date {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                font-size: 1.4rem;\n                color: #FDF0E1;\n                text-align: left;\n                // text-align: center;\n                width: 100%;\n                text-transform: uppercase;\n                height: 1.7rem;\n                margin-bottom: 2rem;\n                // opacity: 0;\n                // top: 66rem;\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000)\n            }\n            .News_Article_Date_Clone {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                font-size: 1.4rem;\n                color: #FDF0E1;\n                text-align: left;\n                text-align: center;\n                width: 100%;\n                text-transform: uppercase;\n                height: 1.7rem;\n                margin-bottom: 2rem;\n                opacity: 0;\n                top: 66rem;\n                transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000)\n            }\n            .News_Article_Line {\n                width: 100%;\n                height: 1px;\n                background-color: #E74833;\n            }\n            .News_Article_Line.fixedHeight {\n                position: absolute;\n                top: 17rem;\n            }\n            .News_Article_HTML {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                font-size: 1.8rem;\n                line-height: 2.4rem;\n                // font-size: 1.4rem;\n                // line-height: 2rem;\n                color: #FDF0E1;\n                position: relative;\n                top: 60rem;\n                left: 50%;\n                z-index: 2;\n                opacity: 0;\n                width: 50vw;\n                transform: translateX(-50%);\n                transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                iframe {\n                    padding: 5rem 0;\n                    margin: 0 auto;\n                    width: 100%;\n                }\n                ul {\n                    padding: 0 4rem;\n                }\n                blockquote {\n                    font-size: 4rem;\n                    font-family: \"marscondensed-regular-TRIAL\", sans-serif;\n                    line-height: 3.5rem;\n                    text-transform: uppercase;\n                    padding: 4rem 0;\n                    border-top: 1px #FDF0E1 solid;\n                    border-bottom: 1px #FDF0E1 solid;\n                    padding: 4rem 0;\n                    margin: 0 auto;\n                }\n                a {\n                    font-weight: bold;\n                    color: #FDF0E1 !important;\n                    text-decoration: none;\n                    border-bottom: 1px #E74833 solid;\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &:hover {\n                        opacity: 0.5;\n                    }\n                }\n                img {\n                    max-height: 40rem;\n                    max-width: 100%;\n                    padding: 4rem 0;\n                    margin: 0 auto;\n                    text-align: center;\n                    display: flex;\n                }\n            }\n            // .News_Article_Clone_Close {\n            //     width: 5rem;\n            //     height: 5rem;\n            //     margin: 0 auto;\n            //     display: flex;\n            //     justify-content: center;\n            //     align-items: center;\n            //     position: relative;\n            //     padding: calc(2.5% + 5rem) 0 0;\n            //     // padding: calc(2.5% + 10rem) 0 0;\n            //     opacity: 0;\n            //     transform: translateY(-10rem);\n            //     transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 100ms;\n            //     &__L1 {\n            //         height: 2px;\n            //         background-color: #FDF0E1;\n            //         width: 100%;\n            //         position: absolute;\n            //         top: 50%;\n            //         left: 50%;\n            //         transform-origin: left;\n            //         transform: rotate(45deg) translate(-50%, -50%);\n            //     }\n            //     &__L2 {\n            //         height: 2px;\n            //         background-color: #FDF0E1;\n            //         width: 100%;\n            //         position: absolute;\n            //         top: 50%;\n            //         left: 50%;\n            //         transform-origin: left;\n            //         transform: rotate(-45deg) translate(-50%, -50%);\n            //     }\n            // }\n            .NewsPageUI_Wrapper_ACTIVE {\n                &:before {\n                    opacity: 0;\n                }\n                // .News_Article_Clone_Close {\n                //     opacity: 1;\n                //     transform: translateY(0);\n                // }\n                .News_Header {\n                    opacity: 0;\n                    transform: translateY(125%);\n                    transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                }\n                .News_Article_ACTIVE {\n                    .News_Article_Img {\n                        visibility: hidden;\n                    }\n                }\n                .News_Article_Clone_Wrapper {\n                    position: fixed;\n                    top: 0;\n                    left: 0;\n                    width: 100%;\n                    height: 100vh;\n                    .News_Article_Img {\n                        visibility: initial;\n                        transform: translateX(0%);\n                    }\n                }\n                .News_Article_Date_Header {\n                    opacity: 1;\n                    margin: calc(2.5% + 10rem) auto 2rem;\n                    transform: translateY(0%);\n                }\n                .News_Article_Title_Header {\n                    opacity: 1;\n                    transform: translateY(0%);\n                }\n                .News_Article_Img {\n                    // border: 2px solid #E74833 !important;\n                    box-shadow: 0px 0px 0px 2px #E74833 !important;;\n                    filter: brightness(1) sepia(0) grayscale(0) contrast(1.0) !important;\n                }\n                .News_Article_Img_Thumb {\n                    opacity: 0;\n                    // transition: initial;\n                }\n                // .News_Article_Date {\n                //     opacity: 1;\n                // }\n                .News_Article_Date_Clone {\n                    opacity: 1;\n                }\n                .News_Article_HTML {\n                    opacity: 1;\n                    top: 70.8rem;\n                    transition: all 1000ms cubic-bezier(0.455, 0.030, 0.515, 0.955);\n                }\n                // .News_Article_Icon_Wrapper {\n                //     visibility: initial;\n                // }\n                // .News_Article_Icon {\n                //     opacity: 1;\n                // }\n            }\n            .News_Article_HIDE {\n                opacity: 0;\n                transition: opacity 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 0ms;\n            }\n            .News_Article_Clone {\n                position: relative;\n                // top: 150px;\n                width: 100%;\n            }\n            .News_Article_Clone_ACTIVE {\n                .News_Article_Img {\n                    transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), width 1000ms cubic-bezier(0.455, 0.030, 0.515, 0.955);\n                }\n            }\n            .News_Article_Clone_ACTIVE_V2 {\n                .News_Article_Img {\n                    // height: 60rem;\n                    height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                    // width: calc((100vw / 3) * 2 + 10rem);\n                    width: calc((100vw / 3) * 2 + 10rem) !important;\n                    left: calc(50% - ((100vw / 3) * 2 + 10rem) / 2) !important;\n                    transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), width 1000ms cubic-bezier(0.455, 0.030, 0.515, 0.955), height 0ms;\n                }\n            }\n            .News_Article_Clone_ANIMATE_ACTIVE {\n                // height: 60rem !important;\n                height: calc(((100vw / 3) * 2 + 10rem) * 0.627) !important;\n                top: 0 !important;\n                left: 50% !important;\n                width: calc((100% / 3) * 2 + 10rem) !important;\n                margin: -2rem auto 10rem;\n                transform: translateX(-50%) !important;\n            }\n            .News_Article_Clone_ANIMATE_ACTIVE_V2 {\n                top: 0 !important;\n                margin: -2rem auto 10rem;\n            }\n            // .News_Article_Icon_Wrapper {\n            //     width: calc((100% / 3) * 2 + 10rem);\n            //     margin: 0 auto;\n            //     visibility: hidden;\n            //     z-index: 1;\n            // }\n            // .News_Article_Icon {\n            //     opacity: 0;\n            //     width: 20rem;\n            //     height: 20rem;\n            //     background-image: url('../images/icons/cta-scroll.svg');\n            //     position: absolute;\n            //     right: -17rem;\n            //     top: 42rem;\n            //     transition: all 700ms cubic-bezier(0.455, 0.03, 0.515, 0.955) 300ms;\n            // }\n\n            .NewsPage_ACTIVE {\n                overflow: initial !important;\n                .News_Article_Clone {\n                    background-color: #161616;\n                }\n            }\n            \n            @media screen and (max-width: 960px) {\n                .News_Article_Title_Header {\n                    font-size: 8rem;\n                    line-height: 7rem;\n                }\n            }\n\n            @media screen and (max-width: 600px) {\n                .News_Article_Clone {\n                    top: 100px;\n                }\n                .News_Header {\n                    font-size: 6rem;\n                    width: 100%;\n                    margin: 10rem 0 5rem;\n                }\n                .NewsPageUI_Wrapper {\n                    width: 100%;\n                }\n                .News_Articles {\n                    width: calc(100% - 5rem);\n                }\n                .News_Article_Wrapper {\n                    width: 100%;\n                    height: calc((20rem + 3rem) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                }\n                .News_Article {\n                    width: 100%;\n                }\n                .News_Article_Wrapper.News_Article_Featured {\n                    height: calc((20rem + 3rem) + (10.3rem + 3rem) + (1.7rem + 2rem) + (1.4rem + 1rem));\n                }\n                .News_Article_Featured {\n                    .News_Article_Img {\n                        // height: 20rem;\n                        width: calc(100vw - 5rem);\n                        height: calc((100vw - 5rem) * 0.627);\n                    }\n                    .News_Article_Content_Wrapper {\n                        top: 23rem;\n                    }\n                }\n                .News_Article_Content_Wrapper {\n                    top: 23rem;\n                }\n                .News_Article_Img {\n                    // width: 100%;\n                    // height: 20rem;\n                    // width: calc(100vw - 5rem);\n                    height: calc((100vw - 5rem) * 0.627);\n                    width: calc(100vw - 5rem) !important;\n                    left: calc(50% - (100vw - 5rem) / 2) !important;\n                }\n                .News_Article_Content {\n                    width: 100%;\n                }\n                .News_Article_Title_Header {\n                    font-size: 6rem;\n                    line-height: 5rem;\n                    padding: 0;\n                }\n                // .News_Article_Clone_Close {\n                //     visibility: hidden;\n                // }\n                .News_Article_Clone_ANIMATE_ACTIVE_V2.News_Article_Img {\n                    // height: 20rem ;\n                    // height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                    height: calc((100vw - 5rem)*.627);\n                    // width: calc((100vw / 3) * 2 + 10rem);\n                    // width: calc(100% - 5rem)!important;\n                    width: calc(100vw - 5rem) !important;\n                    left: calc(50% - (100vw - 5rem) / 2) !important;\n                    transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000), width 0ms, height 0ms, left 0ms,;\n                }\n                .News_Article_Clone_ANIMATE_ACTIVE {\n                    height: 20rem !important;\n                    top: 0 !important;\n                    left: 50% !important;\n                    width: calc(100% - 5rem)!important;\n                    transform: translateX(-50%) !important;\n                }\n                // .News_Article_Date {\n                //     top: 35rem;\n                // }\n                .News_Article_HTML {\n                    // top: 5rem;\n                    top: 40rem;\n                }\n                .NewsPageUI_Wrapper_ACTIVE {\n                    // .News_Article_Date {\n                    //     // top: 25rem;\n                    //     top: calc(((100vw / 3) * 2 + 10rem) * 0.627 + 5rem);\n                    // }\n                    .News_Article_Date_Clone {\n                        // top: 25rem;\n                        top: calc(((100vw / 3) * 2 + 10rem) * 0.627 + 5rem);\n                    }\n                    .News_Article_HTML {\n                        position: relative;\n                        // top: 0rem;\n                        // top: 30rem;\n                        top: calc(((100vw / 3) * 2 + 10rem) * 0.627 + 10rem);\n                        // padding: 25rem 0 20rem;\n                        width: calc(100% - 5rem);\n                        transition: all 1000ms cubic-bezier(0.455, 0.03, 0.515, 0.955), width 0ms;\n                    }\n                    .News_Article_Clone_Wrapper {\n                        top: 0 !important;\n                    }\n                    // .News_Article_Icon_Wrapper {\n                    //     visibility: hidden;\n                    // }\n                }\n            }            \n        }        \n        ";
       }),
       (this.render = function (html) {
         return html`
@@ -73522,7 +73525,7 @@ Class(function MouseFluid(
         );
       }),
       (this.style = function () {
-        return "\n        @font-face {\n            font-family: 'marscondensed-regular-TRIAL';\n            src: url('../fonts/marscondensed-regular-TRIAL.otf') format('opentype');\n            font-weight: 400;\n            font-style: bold;\n        }\n        @font-face {\n            font-family: 'FuturaLT-Bold';\n            src: url('../fonts/FuturaLT-Bold.ttf') format('truetype');\n            font-weight: 600;\n            font-style: normal;\n        }\n        @font-face {\n            font-family: 'FuturaLT-Medium';\n            src: url('../fonts/FuturaLT-Medium.ttf') format('truetype');\n            font-weight: 400;\n            font-style: normal;\n        }\n\n        #Stage, #Stage * {\n            .NewsDetailUI, {\n                width: 100%;\n                position: relative;\n                background-color: #161616;\n                * {\n                    position: relative;\n                    user-select: text;\n                }\n            }\n            .NewsDetailUI {\n                display: block;\n            }\n            .NewsDetailUI_Wrapper {\n                width: 100%;\n                display: block;\n                &:before {\n                    content: '';\n                    position: absolute;\n                    top: 0;\n                    left: 0;\n                    width: 100%;\n                    height: 100%;\n                    background-image: url('../assets/images/textures/grains.png');\n                    background-repeat-y: repeat;\n                    filter: brightness(2.75);\n                    opacity: 0;\n                    animation: GRAINS 1s linear 1 normal forwards;\n                }\n            }\n            @keyframes GRAINS {\n                0%   {opacity: 0}\n                50% {opacity: 1}\n                100% {opacity: 1}\n            }\n            // .News_Detail_Close_Wrapper {\n            //     padding: calc(2.5% + 0.7rem) 0 4.3rem;\n            //     margin: 0 auto;\n            //     display: flex;\n            //     justify-content: center;\n            //     align-items: center;\n            //     width: 5rem;\n            // }\n            // .News_Detail_Close {\n            //     width: 5rem;\n            //     height: 5rem;\n            //     position: relative;\n            //     transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            //     text-decoration: none;\n            //     &__L1 {\n            //         height: 2px;\n            //         background-color: #FDF0E1;\n            //         width: 100%;\n            //         position: absolute;\n            //         top: 50%;\n            //         left: 50%;\n            //         transform-origin: left;\n            //         transform: rotate(45deg) translate(-50%, -50%);\n            //         transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            //     }\n            //     &__L2 {\n            //         height: 2px;\n            //         background-color: #FDF0E1;\n            //         width: 100%;\n            //         position: absolute;\n            //         top: 50%;\n            //         left: 50%;\n            //         transform-origin: left;\n            //         transform: rotate(-45deg) translate(-50%, -50%);\n            //         transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            //     }\n            //     &:hover {\n            //         cursor: pointer;\n            //         opacity: 0.5;\n            //         transform: scale(0.8);\n            //     }\n            //     &:focus {\n            //         cursor: pointer;\n            //         opacity: 0.5;\n            //         transform: scale(0.8);\n            //         outline: auto;\n            //     }\n                \n            // }\n            .News_Detail_Title {\n                font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                font-size: 12rem;\n                color: transparent;\n                text-align: center;\n                text-transform: uppercase;\n                line-height: 10rem;\n                // padding: calc(2.5% + 1.25rem) 0 0;\n                padding: 150px 0 0;\n                // padding: 9.6% 0 0;\n                margin: 0 auto 0;\n                z-index: 1;\n                width: 80vw;\n                // background: url('../images/textures/grains_2.jpg');\n                background: url('../assets/images/textures/grains_2.jpg');\n                background-size: cover;\n                -webkit-background-clip: text;\n                background-clip: text;\n            }\n            .News_Detail_Img {\n                background-size: cover;\n                background-position: center;\n                background-repeat: no-repeat;\n                height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                width: calc((100vw / 3) * 2 + 10rem);\n                // height: 60rem;\n                // width: calc((100% / 3) * 2 + 10rem);\n                margin: 0 auto;\n                border-radius: 1.2rem;\n                // border: 2px solid #E74833;\n                box-shadow: 0px 0px 0px 2px #E74833;\n                position: relative;\n                margin-top: 3rem;\n            }\n            // .News_Detail_Icon {\n            //     width: 20rem;\n            //     height: 20rem;\n            //     background-image: url('../images/icons/cta-scroll.svg');\n            //     position: absolute;\n            //     right: -17rem;\n            //     bottom: -4rem;\n            // }\n            .News_Detail_Date {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                text-align: center;\n                font-size: 1.4rem;\n                color: #FDF0E1;\n                text-transform: uppercase;\n                position: relative;\n                padding: 6rem 0 3rem;\n                width: 100%;\n            }\n            .News_Detail_HTML {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                // font-size: 1.4rem;\n                // line-height: 2rem;\n                font-size: 1.8rem;\n                line-height: 2.4rem;\n                color: #FDF0E1;\n                width: 50vw;\n                padding: 0 0 20rem;\n                margin: 0 auto 0;\n                .iframe-wrapper{\n                    width: 100%;\n                    padding-bottom: 56.25%;\n                    margin: 5rem 0;\n                }\n                iframe {\n                    position: absolute;\n                    padding: 0;\n                    margin: 0 auto;\n                    width: 100%;\n                    height: 100%;\n                }\n                ul {\n                    padding: 0 4rem;\n                    margin: 0;\n                }\n                blockquote {\n                    font-size: 4rem;\n                    font-family: \"marscondensed-regular-TRIAL\", sans-serif;\n                    line-height: 3.5rem;\n                    text-transform: uppercase;\n                    padding: 4rem 0;\n                    border-top: 1px #FDF0E1 solid;\n                    border-bottom: 1px #FDF0E1 solid;\n                    padding: 4rem 0;\n                    margin: 0 auto;\n                }\n                a {\n                    font-weight: bold;\n                    color: #FDF0E1 !important;\n                    text-decoration: none;\n                    border-bottom: 1px #E74833 solid;\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &:hover {\n                        opacity: 0.5;\n                    }\n                    &:focus {\n                        outline: auto;\n                    }\n                }\n                img {\n                    // max-height: 40rem;\n                    // max-width: 100%;\n                    width: 100%;\n                    padding: 0;\n                    margin: 0 auto;\n                    text-align: center;\n                    display: flex;\n                }\n                p {\n                    padding: 0;\n                    margin: 0;\n                }\n                .ql-size-small {\n                    font-size: 1.2rem !important;\n                    line-height: 1.6rem !important;\n                }\n            }\n            .News_Detail_Nav {\n                display: flex;\n                justify-content: space-between;\n                width: 80vw;\n                margin: auto;\n                padding-bottom: 5rem;\n            }\n            .News_Detail_Nav_Prev {\n                cursor: pointer;\n                display: flex;\n                align-items: center;\n                justify-content: flex-start;\n                width: 18rem;\n                text-decoration: none;\n                &__Arrow {\n                    width: 3rem;\n                    height: 3rem;\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &__L1 {\n                        transform-origin: left;\n                        position: absolute;\n                        transform: rotate(-45deg);\n                        top: 50%;\n                        width: 2rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                    &__L2 {\n                        position: absolute;\n                        top: 50%;\n                        width: 3rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                    &__L3 {\n                        position: absolute;\n                        top: 50%;\n                        transform-origin: left;\n                        transform: rotate(45deg);\n                        width: 2rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                }\n                &__Text {\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &:after {\n                        content: 'PREV ARTICLE';\n                        font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                        font-size: 3rem;\n                        color: #E74833;\n                        margin-left: 2rem;\n                    }\n                }\n                &:hover {\n                    .News_Detail_Nav_Prev__Arrow {\n                        transform: translateX(-50%);\n                    }\n                    .News_Detail_Nav_Prev__Text {\n                        opacity: 0.5;\n                        transform: translateX(-20%);\n                    }\n                }\n                &:focus {\n                    .News_Detail_Nav_Prev__Arrow {\n                        transform: translateX(-50%);\n                    }\n                    .News_Detail_Nav_Prev__Text {\n                        opacity: 0.5;\n                        transform: translateX(-20%);\n                    }\n                }\n            }\n            .News_Detail_Nav_Next {\n                cursor: pointer;\n                display: flex;\n                align-items: center;\n                justify-content: flex-end;\n                width: 18rem;\n                text-decoration: none;\n                &__Arrow {\n                    width: 3rem;\n                    height: 3rem;\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &__L1 {\n                        transform-origin: right;\n                        position: absolute;\n                        transform: rotate(-45deg);\n                        top: 50%;\n                        right: 0;\n                        width: 2rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                    &__L2 {\n                        position: absolute;\n                        top: 50%;\n                        width: 3rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                    &__L3 {\n                        position: absolute;\n                        top: 50%;\n                        right: 0;\n                        transform-origin: right;\n                        transform: rotate(45deg);\n                        width: 2rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                }\n                &__Text {\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &:after {\n                        content: 'NEXT ARTICLE';\n                        font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                        font-size: 3rem;\n                        color: #E74833;\n                        margin-right: 2rem;\n                    }\n                }\n                &:hover {\n                    .News_Detail_Nav_Next__Text {\n                        opacity: 0.5;\n                        transform: translateX(20%);\n                    }\n                    .News_Detail_Nav_Next__Arrow {\n                        transform: translateX(50%);\n                    }\n                }\n                &:focus {\n                    .News_Detail_Nav_Next__Text {\n                        opacity: 0.5;\n                        transform: translateX(20%);\n                    }\n                    .News_Detail_Nav_Next__Arrow {\n                        transform: translateX(50%);\n                    }\n                }\n            }\n            @media screen and (max-width: 960px) {\n                .News_Detail_Title {\n                    font-size: 8rem;\n                    line-height: 7rem;\n                }\n            }\n            @media screen and (max-width: 600px) {\n                .NewsDetailUI_Wrapper {\n                    width: calc(100% - 5rem);\n                    margin: auto;\n                }\n                .News_Detail_Title {\n                    font-size: 6rem;\n                    line-height: 5rem;\n                    // padding: calc(2.5% + 2rem) 0 0;\n                    padding: 100px 0 0;\n                }\n                .News_Detail_Date {\n                    width: 100%;\n                    // padding: 5rem 0 0;\n                    // padding: 4.6rem 0 0;\n                    padding: 6.5rem 0 0;\n                }\n                .News_Detail_Img {\n                    // height: 20rem;\n                    // height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                    height: calc((100vw - 5rem)*.627);\n                    width: 100%;\n                }\n                .News_Detail_HTML {\n                    width: 100%;\n                    // padding: 5rem 0 20rem;\n                    padding: 5.3rem 0 20rem;\n                    // padding: 5.1rem 0 20rem; \n                }\n                // .News_Detail_Icon {\n                //     display: none;\n                // }\n                // .News_Detail_Close_Wrapper {\n                //     padding: 0;\n                // }\n                // .News_Detail_Close {\n                //     visibility: hidden;\n                //     padding: calc(2.5% + 10.2rem) 0 0;\n                // }\n                .News_Detail_Nav_Prev {\n                    &__Text {\n                        &:after {\n                            content: 'PREV';\n                        }\n                    }\n                }\n                .News_Detail_Nav_Next {\n                    &__Text {\n                        &:after {\n                            content: 'NEXT';\n                        }\n                    }\n                }\n            }\n        }        \n        ";
+        return "\n        @font-face {\n            font-family: 'marscondensed-regular-TRIAL';\n            src: url('../fonts/marscondensed-regular-TRIAL.otf') format('opentype');\n            font-weight: 400;\n            font-style: bold;\n        }\n        @font-face {\n            font-family: 'FuturaLT-Bold';\n            src: url('../fonts/FuturaLT-Bold.ttf') format('truetype');\n            font-weight: 600;\n            font-style: normal;\n        }\n        @font-face {\n            font-family: 'FuturaLT-Medium';\n            src: url('../fonts/FuturaLT-Medium.ttf') format('truetype');\n            font-weight: 400;\n            font-style: normal;\n        }\n\n        #Stage, #Stage * {\n            .NewsDetailUI, {\n                width: 100%;\n                position: relative;\n                background-color: #161616;\n                * {\n                    position: relative;\n                    user-select: text;\n                }\n            }\n            .NewsDetailUI {\n                display: block;\n            }\n            .NewsDetailUI_Wrapper {\n                width: 100%;\n                display: block;\n                &:before {\n                    content: '';\n                    position: absolute;\n                    top: 0;\n                    left: 0;\n                    width: 100%;\n                    height: 100%;\n                    background-image: url('..//assets/images/textures/grains.png');\n                    background-repeat-y: repeat;\n                    filter: brightness(2.75);\n                    opacity: 0;\n                    animation: GRAINS 1s linear 1 normal forwards;\n                }\n            }\n            @keyframes GRAINS {\n                0%   {opacity: 0}\n                50% {opacity: 1}\n                100% {opacity: 1}\n            }\n            // .News_Detail_Close_Wrapper {\n            //     padding: calc(2.5% + 0.7rem) 0 4.3rem;\n            //     margin: 0 auto;\n            //     display: flex;\n            //     justify-content: center;\n            //     align-items: center;\n            //     width: 5rem;\n            // }\n            // .News_Detail_Close {\n            //     width: 5rem;\n            //     height: 5rem;\n            //     position: relative;\n            //     transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            //     text-decoration: none;\n            //     &__L1 {\n            //         height: 2px;\n            //         background-color: #FDF0E1;\n            //         width: 100%;\n            //         position: absolute;\n            //         top: 50%;\n            //         left: 50%;\n            //         transform-origin: left;\n            //         transform: rotate(45deg) translate(-50%, -50%);\n            //         transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            //     }\n            //     &__L2 {\n            //         height: 2px;\n            //         background-color: #FDF0E1;\n            //         width: 100%;\n            //         position: absolute;\n            //         top: 50%;\n            //         left: 50%;\n            //         transform-origin: left;\n            //         transform: rotate(-45deg) translate(-50%, -50%);\n            //         transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n            //     }\n            //     &:hover {\n            //         cursor: pointer;\n            //         opacity: 0.5;\n            //         transform: scale(0.8);\n            //     }\n            //     &:focus {\n            //         cursor: pointer;\n            //         opacity: 0.5;\n            //         transform: scale(0.8);\n            //         outline: auto;\n            //     }\n                \n            // }\n            .News_Detail_Title {\n                font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                font-size: 12rem;\n                color: transparent;\n                text-align: center;\n                text-transform: uppercase;\n                line-height: 10rem;\n                // padding: calc(2.5% + 1.25rem) 0 0;\n                padding: 150px 0 0;\n                // padding: 9.6% 0 0;\n                margin: 0 auto 0;\n                z-index: 1;\n                width: 80vw;\n                // background: url('../images/textures/grains_2.jpg');\n                background: url('..//assets/images/textures/grains_2.jpg');\n                background-size: cover;\n                -webkit-background-clip: text;\n                background-clip: text;\n            }\n            .News_Detail_Img {\n                background-size: cover;\n                background-position: center;\n                background-repeat: no-repeat;\n                height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                width: calc((100vw / 3) * 2 + 10rem);\n                // height: 60rem;\n                // width: calc((100% / 3) * 2 + 10rem);\n                margin: 0 auto;\n                border-radius: 1.2rem;\n                // border: 2px solid #E74833;\n                box-shadow: 0px 0px 0px 2px #E74833;\n                position: relative;\n                margin-top: 3rem;\n            }\n            // .News_Detail_Icon {\n            //     width: 20rem;\n            //     height: 20rem;\n            //     background-image: url('../images/icons/cta-scroll.svg');\n            //     position: absolute;\n            //     right: -17rem;\n            //     bottom: -4rem;\n            // }\n            .News_Detail_Date {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                text-align: center;\n                font-size: 1.4rem;\n                color: #FDF0E1;\n                text-transform: uppercase;\n                position: relative;\n                padding: 6rem 0 3rem;\n                width: 100%;\n            }\n            .News_Detail_HTML {\n                font-family: 'FuturaLT-Medium', sans-serif;\n                // font-size: 1.4rem;\n                // line-height: 2rem;\n                font-size: 1.8rem;\n                line-height: 2.4rem;\n                color: #FDF0E1;\n                width: 50vw;\n                padding: 0 0 20rem;\n                margin: 0 auto 0;\n                .iframe-wrapper{\n                    width: 100%;\n                    padding-bottom: 56.25%;\n                    margin: 5rem 0;\n                }\n                iframe {\n                    position: absolute;\n                    padding: 0;\n                    margin: 0 auto;\n                    width: 100%;\n                    height: 100%;\n                }\n                ul {\n                    padding: 0 4rem;\n                    margin: 0;\n                }\n                blockquote {\n                    font-size: 4rem;\n                    font-family: \"marscondensed-regular-TRIAL\", sans-serif;\n                    line-height: 3.5rem;\n                    text-transform: uppercase;\n                    padding: 4rem 0;\n                    border-top: 1px #FDF0E1 solid;\n                    border-bottom: 1px #FDF0E1 solid;\n                    padding: 4rem 0;\n                    margin: 0 auto;\n                }\n                a {\n                    font-weight: bold;\n                    color: #FDF0E1 !important;\n                    text-decoration: none;\n                    border-bottom: 1px #E74833 solid;\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &:hover {\n                        opacity: 0.5;\n                    }\n                    &:focus {\n                        outline: auto;\n                    }\n                }\n                img {\n                    // max-height: 40rem;\n                    // max-width: 100%;\n                    width: 100%;\n                    padding: 0;\n                    margin: 0 auto;\n                    text-align: center;\n                    display: flex;\n                }\n                p {\n                    padding: 0;\n                    margin: 0;\n                }\n                .ql-size-small {\n                    font-size: 1.2rem !important;\n                    line-height: 1.6rem !important;\n                }\n            }\n            .News_Detail_Nav {\n                display: flex;\n                justify-content: space-between;\n                width: 80vw;\n                margin: auto;\n                padding-bottom: 5rem;\n            }\n            .News_Detail_Nav_Prev {\n                cursor: pointer;\n                display: flex;\n                align-items: center;\n                justify-content: flex-start;\n                width: 18rem;\n                text-decoration: none;\n                &__Arrow {\n                    width: 3rem;\n                    height: 3rem;\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &__L1 {\n                        transform-origin: left;\n                        position: absolute;\n                        transform: rotate(-45deg);\n                        top: 50%;\n                        width: 2rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                    &__L2 {\n                        position: absolute;\n                        top: 50%;\n                        width: 3rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                    &__L3 {\n                        position: absolute;\n                        top: 50%;\n                        transform-origin: left;\n                        transform: rotate(45deg);\n                        width: 2rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                }\n                &__Text {\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &:after {\n                        content: 'PREV ARTICLE';\n                        font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                        font-size: 3rem;\n                        color: #E74833;\n                        margin-left: 2rem;\n                    }\n                }\n                &:hover {\n                    .News_Detail_Nav_Prev__Arrow {\n                        transform: translateX(-50%);\n                    }\n                    .News_Detail_Nav_Prev__Text {\n                        opacity: 0.5;\n                        transform: translateX(-20%);\n                    }\n                }\n                &:focus {\n                    .News_Detail_Nav_Prev__Arrow {\n                        transform: translateX(-50%);\n                    }\n                    .News_Detail_Nav_Prev__Text {\n                        opacity: 0.5;\n                        transform: translateX(-20%);\n                    }\n                }\n            }\n            .News_Detail_Nav_Next {\n                cursor: pointer;\n                display: flex;\n                align-items: center;\n                justify-content: flex-end;\n                width: 18rem;\n                text-decoration: none;\n                &__Arrow {\n                    width: 3rem;\n                    height: 3rem;\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &__L1 {\n                        transform-origin: right;\n                        position: absolute;\n                        transform: rotate(-45deg);\n                        top: 50%;\n                        right: 0;\n                        width: 2rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                    &__L2 {\n                        position: absolute;\n                        top: 50%;\n                        width: 3rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                    &__L3 {\n                        position: absolute;\n                        top: 50%;\n                        right: 0;\n                        transform-origin: right;\n                        transform: rotate(45deg);\n                        width: 2rem;\n                        height: 1px;\n                        background: #E74833;\n                    }\n                }\n                &__Text {\n                    transition: all 300ms cubic-bezier(0.190, 1.000, 0.220, 1.000);\n                    &:after {\n                        content: 'NEXT ARTICLE';\n                        font-family: 'marscondensed-regular-TRIAL', sans-serif;\n                        font-size: 3rem;\n                        color: #E74833;\n                        margin-right: 2rem;\n                    }\n                }\n                &:hover {\n                    .News_Detail_Nav_Next__Text {\n                        opacity: 0.5;\n                        transform: translateX(20%);\n                    }\n                    .News_Detail_Nav_Next__Arrow {\n                        transform: translateX(50%);\n                    }\n                }\n                &:focus {\n                    .News_Detail_Nav_Next__Text {\n                        opacity: 0.5;\n                        transform: translateX(20%);\n                    }\n                    .News_Detail_Nav_Next__Arrow {\n                        transform: translateX(50%);\n                    }\n                }\n            }\n            @media screen and (max-width: 960px) {\n                .News_Detail_Title {\n                    font-size: 8rem;\n                    line-height: 7rem;\n                }\n            }\n            @media screen and (max-width: 600px) {\n                .NewsDetailUI_Wrapper {\n                    width: calc(100% - 5rem);\n                    margin: auto;\n                }\n                .News_Detail_Title {\n                    font-size: 6rem;\n                    line-height: 5rem;\n                    // padding: calc(2.5% + 2rem) 0 0;\n                    padding: 100px 0 0;\n                }\n                .News_Detail_Date {\n                    width: 100%;\n                    // padding: 5rem 0 0;\n                    // padding: 4.6rem 0 0;\n                    padding: 6.5rem 0 0;\n                }\n                .News_Detail_Img {\n                    // height: 20rem;\n                    // height: calc(((100vw / 3) * 2 + 10rem) * 0.627);\n                    height: calc((100vw - 5rem)*.627);\n                    width: 100%;\n                }\n                .News_Detail_HTML {\n                    width: 100%;\n                    // padding: 5rem 0 20rem;\n                    padding: 5.3rem 0 20rem;\n                    // padding: 5.1rem 0 20rem; \n                }\n                // .News_Detail_Icon {\n                //     display: none;\n                // }\n                // .News_Detail_Close_Wrapper {\n                //     padding: 0;\n                // }\n                // .News_Detail_Close {\n                //     visibility: hidden;\n                //     padding: calc(2.5% + 10.2rem) 0 0;\n                // }\n                .News_Detail_Nav_Prev {\n                    &__Text {\n                        &:after {\n                            content: 'PREV';\n                        }\n                    }\n                }\n                .News_Detail_Nav_Next {\n                    &__Text {\n                        &:after {\n                            content: 'NEXT';\n                        }\n                    }\n                }\n            }\n        }        \n        ";
       }),
       (this.render = function (html) {
         return html`
@@ -73658,10 +73661,10 @@ Class(function MouseFluid(
         (_this.layout = _this.initClass(SceneLayout, "PartnersHero")),
         (_this.layers = await _this.layout.getAllLayers()),
         (_imgTextureLandscape = Utils3D.getTexture(
-          "assets/images/partners/partners-hero.jpg"
+          "/assets/images/partners/partners-hero.jpg"
         )),
         (_imgTexturePortrait = Utils3D.getTexture(
-          "assets/images/partners/partners-hero-mobile.jpg"
+          "/assets/images/partners/partners-hero-mobile.jpg"
         )),
         (_this.layers.text.renderOrder += 100),
         (_this.layers.image.renderOrder = -1),
@@ -73791,7 +73794,7 @@ Class(function MouseFluid(
     }
     _shader.addUniforms({
       tMap: {
-        value: Utils3D.getTexture("assets/images/partners/lines.png"),
+        value: Utils3D.getTexture("/assets/images/partners/lines.png"),
       },
       uScale: {
         value: new Vector2(1, 1),
@@ -73965,7 +73968,7 @@ Class(function MouseFluid(
               shader = _this.initClass(Shader, "PartnersLogoShader", {
                 tNoise: {
                   value: Utils3D.getTexture(
-                    "assets/images/noise/dirnoise3.jpg"
+                    "/assets/images/noise/dirnoise3.jpg"
                   ),
                   ignoreUIL: !0,
                 },
@@ -74290,7 +74293,7 @@ Class(function MouseFluid(
               value: _color,
             },
           });
-          ($circle = $gl(1, 1, "assets/images/ui/star-circle.png")).useShader(
+          ($circle = $gl(1, 1, "/assets/images/ui/star-circle.png")).useShader(
             shader
           ),
             ($circle.x = -0.5),
@@ -74304,9 +74307,11 @@ Class(function MouseFluid(
               value: _color,
             },
           });
-          ($arrow = $gl(0.4, 0.4, "assets/images/ui/down-arrow.png")).useShader(
-            shader
-          ),
+          ($arrow = $gl(
+            0.4,
+            0.4,
+            "/assets/images/ui/down-arrow.png"
+          )).useShader(shader),
             ($arrow.x = 0.3),
             ($arrow.y = 0.3),
             $wrapper.add($arrow);
@@ -74389,7 +74394,9 @@ Class(function MouseFluid(
         value: null,
       },
       tNoise: {
-        value: Utils3D.getTexture("assets/images/noise/dirnoise_basecolor.png"),
+        value: Utils3D.getTexture(
+          "/assets/images/noise/dirnoise_basecolor.png"
+        ),
         ignoreUIL: !0,
       },
       uTimeScale: {
@@ -74543,17 +74550,17 @@ Class(function MouseFluid(
               `\n            width: 100%;\n            height: 100%;\n\n            .videoModal {\n                z-index: 99999;\n                position: fixed !important;\n                width: 100%;\n                height: 100%;\n                top: 0;\n                left: 0;\n                background: rgba(255,255,255, 0.75);\n            }\n\n            .vidContainer {\n                top: 0;\n                bottom: 0;\n                left: 0;\n                right: 0;\n                margin: auto;\n                width: 100%;\n                height: 100%;\n                background: rgba(50,50,50, 0.75);\n\n                video {\n                    pointer-events: ${
                 Device.mobile ? "auto" : "none"
               };\n                    width: 100%;\n                    height: 100%;\n                    top: 0;\n                    left: 0;\n\n                    &.forceReflow {\n                        position: absolute !important;\n                    }\n                }\n            }\n\n            .close-container {\n                position: absolute;\n                top: 47px;\n                right: 25px;\n                width: 4rem;\n                height: 4rem;\n                transform: translateX(-50%);\n\n                @media (max-width: 767px) {\n                    top: 27px;\n                    right: 16px;\n                }\n\n                @media (max-width: 600px) {\n                    top: 27px;\n                    right: 8px;\n                }\n            }\n\n            .closeButton {\n                position: absolute;\n                top: 50px;\n                right: 50px;\n                width: 50px;\n                height: 50px;\n                background: #ff0000;\n            }\n\n            .vjs-control-bar {\n                position: absolute !important;\n                bottom: 42px;\n\n                @media (max-width: 767px) {\n                    bottom: 20px;\n                }\n            }\n\n            #custom-player .vjs-play-control .vjs-icon-placeholder:before {\n                background-image: url(${Assets.getPath(
-                "assets/images/technology/player-ui/icon-play.png"
+                "/assets/images/technology/player-ui/icon-play.png"
               )});\n            }\n\n            #custom-player .vjs-play-control.vjs-playing .vjs-icon-placeholder:before {\n                background-image: url(${Assets.getPath(
-                "assets/images/technology/player-ui/icon-pause.png"
+                "/assets/images/technology/player-ui/icon-pause.png"
               )});\n            }\n\n            #custom-player .vjs-mute-control .vjs-icon-placeholder:before {\n                background-image: url(${Assets.getPath(
-                "assets/images/technology/player-ui/icon-volume.png"
+                "/assets/images/technology/player-ui/icon-volume.png"
               )});\n            }\n\n            #custom-player .vjs-mute-control.vjs-vol-2 .vjs-icon-placeholder:before {\n                background-image: url(${Assets.getPath(
-                "assets/images/technology/player-ui/icon-volume-low.png"
+                "/assets/images/technology/player-ui/icon-volume-low.png"
               )});\n            }\n\n            #custom-player .vjs-mute-control.vjs-vol-1 .vjs-icon-placeholder:before, \n            #custom-player .vjs-mute-control.vjs-vol-0 .vjs-icon-placeholder:before {\n                background-image: url(${Assets.getPath(
-                "assets/images/technology/player-ui/icon-volume-none.png"
+                "/assets/images/technology/player-ui/icon-volume-none.png"
               )});\n            }\n            \n            #custom-player .vjs-fullscreen-control .vjs-icon-placeholder:before {\n                background-image: url(${Assets.getPath(
-                "assets/images/technology/player-ui/icon-fullscreen.png"
+                "/assets/images/technology/player-ui/icon-fullscreen.png"
               )});\n            }\n        `
             );
           })(),
@@ -74618,12 +74625,12 @@ Class(function MouseFluid(
                 (_element.style.maxWidth = "100%"),
                 (_element.style.background = "#000000"),
                 (_element.src = Assets.getPath(
-                  "assets/images/technology/Prometheus_Tech_Film_1080_v4.mp4"
+                  "/assets/images/technology/Prometheus_Tech_Film_1080_v4.mp4"
                 )),
                 $vidContainer.div.appendChild(_element),
                 Global.PLAYGROUND &&
                   (await AssetLoader.loadAssets([
-                    "~assets/js/lib/video.min.js",
+                    "~/assets/js/lib/video.min.js",
                   ]));
               (_video = videojs(
                 _element,
@@ -74694,7 +74701,7 @@ Class(function MouseFluid(
                 }
               )).src({
                 src: Assets.getPath(
-                  "assets/images/technology/Prometheus_Tech_Film_1080_v4.mp4"
+                  "/assets/images/technology/Prometheus_Tech_Film_1080_v4.mp4"
                 ),
                 type: "video/mp4",
               }),
@@ -74764,7 +74771,7 @@ Class(function MouseFluid(
     const _this = this;
     !(function () {
       let btnTexture = Utils3D.getTexture(
-          Assets.getPath("assets/images/technology/play_btn.png")
+          Assets.getPath("/assets/images/technology/play_btn.png")
         ),
         playShader = _this.initClass(Shader, "TechnologyPlayBtnScriptClass", {
           tMap: {
@@ -74780,7 +74787,7 @@ Class(function MouseFluid(
             value: 0,
           },
           tNoise: {
-            value: Utils3D.getTexture("assets/images/noise/dirnoise3.jpg"),
+            value: Utils3D.getTexture("/assets/images/noise/dirnoise3.jpg"),
             ignoreUIL: !0,
           },
           uTimeScale: {
@@ -74821,7 +74828,7 @@ Class(function MouseFluid(
         value: 0,
       },
       tNoise: {
-        value: Utils3D.getTexture("assets/images/noise/dirnoise3.jpg"),
+        value: Utils3D.getTexture("/assets/images/noise/dirnoise3.jpg"),
         ignoreUIL: !0,
       },
       uTimeScale: {
@@ -75013,12 +75020,12 @@ Class(function MouseFluid(
             ($playBtn.y = Stage.height / 2 + 180),
             GLUI.Stage.add($playBtn);
           let btnTexture = Utils3D.getTexture(
-            Assets.getPath("assets/images/technology/play_btn.png")
+            Assets.getPath("/assets/images/technology/play_btn.png")
           );
           (($playIcon = $gl(
             64,
             64,
-            Assets.getPath("assets/images/technology/play_btn.png")
+            Assets.getPath("/assets/images/technology/play_btn.png")
           )).x = -32),
             ($playIcon.y = -32);
           let playShader = _this.initClass(
@@ -75038,7 +75045,7 @@ Class(function MouseFluid(
                 value: 0,
               },
               tNoise: {
-                value: Utils3D.getTexture("assets/images/noise/dirnoise3.jpg"),
+                value: Utils3D.getTexture("/assets/images/noise/dirnoise3.jpg"),
                 ignoreUIL: !0,
               },
               uTimeScale: {
@@ -75060,7 +75067,7 @@ Class(function MouseFluid(
             (($playTextLabel = $gl(
               80.15,
               12.49,
-              Assets.getPath("assets/images/technology/play_btn.png")
+              Assets.getPath("/assets/images/technology/play_btn.png")
             )).x = -41),
             ($playTextLabel.y = Device.mobile ? 49 : 43);
           let textShader = _this.initClass(
@@ -75077,7 +75084,7 @@ Class(function MouseFluid(
                 value: 1,
               },
               tNoise: {
-                value: Utils3D.getTexture("assets/images/noise/dirnoise3.jpg"),
+                value: Utils3D.getTexture("/assets/images/noise/dirnoise3.jpg"),
                 ignoreUIL: !0,
               },
               uTimeScale: {
@@ -75199,7 +75206,7 @@ Class(function MouseFluid(
         value: 0,
       },
       tNoise: {
-        value: Utils3D.getTexture("assets/images/noise/dirnoise3.jpg"),
+        value: Utils3D.getTexture("/assets/images/noise/dirnoise3.jpg"),
         ignoreUIL: !0,
       },
       uTimeScale: {
@@ -75217,7 +75224,7 @@ Class(function MouseFluid(
     }),
       (_videoTexture = _this.initClass(
         VideoTexture,
-        Assets.getPath("assets/images/technology/0_Landing.mp4"),
+        Assets.getPath("/assets/images/technology/0_Landing.mp4"),
         {
           autoplay: !0,
           muted: !0,
@@ -75242,7 +75249,7 @@ Class(function MouseFluid(
         value: 1,
       },
       uDustTexture: {
-        value: Utils3D.getRepeatTexture("assets/images/test/dust.jpg"),
+        value: Utils3D.getRepeatTexture("/assets/images/test/dust.jpg"),
         ignoreUIL: !0,
       },
     });
@@ -75349,18 +75356,18 @@ Class(function MouseFluid(
         _shader.set("uStageDimensions", _dimensions));
     }
     !(async function () {
-      let texture = Utils3D.getRepeatTexture("assets/images/noise/grunge.jpg");
+      let texture = Utils3D.getRepeatTexture("/assets/images/noise/grunge.jpg");
       _shader.addUniforms({
         tTo: {
-          value: Utils3D.getTexture("assets/images/_scenelayout/uv.jpg"),
+          value: Utils3D.getTexture("/assets/images/_scenelayout/uv.jpg"),
           ignoreUIL: !0,
         },
         tFrom: {
-          value: Utils3D.getTexture("assets/images/_scenelayout/uv.jpg"),
+          value: Utils3D.getTexture("/assets/images/_scenelayout/uv.jpg"),
           ignoreUIL: !0,
         },
         tNoise: {
-          value: Utils3D.getRepeatTexture("assets/images/noise/dirnoise3.jpg"),
+          value: Utils3D.getRepeatTexture("/assets/images/noise/dirnoise3.jpg"),
           ignoreUIL: !0,
         },
         tGrunge: {
@@ -75427,7 +75434,7 @@ Class(function MouseFluid(
     const _this = this;
     _shader.addUniforms({
       tNoise: {
-        value: Utils3D.getTexture("assets/images/noise/dirnoise18.jpg"),
+        value: Utils3D.getTexture("/assets/images/noise/dirnoise18.jpg"),
         ignoreUIL: !0,
       },
       uTimeScale: {
@@ -75711,7 +75718,7 @@ Class(function MouseFluid(
           },
           tBrush: {
             value: Utils3D.getRepeatTexture(
-              "assets/images/noise/brushstroke.jpg"
+              "/assets/images/noise/brushstroke.jpg"
             ),
             ignoreUIL: !0,
           },
@@ -76272,7 +76279,7 @@ Class(function MouseFluid(
         value: 8,
       },
       tBrush: {
-        value: Utils3D.getRepeatTexture("assets/images/noise/brushstroke.jpg"),
+        value: Utils3D.getRepeatTexture("/assets/images/noise/brushstroke.jpg"),
         ignoreUIL: !0,
       },
       uBrushBlend: {
@@ -76343,7 +76350,7 @@ Class(function MouseFluid(
         value: 0,
       },
       tBrush: {
-        value: Utils3D.getRepeatTexture("assets/images/noise/brushstroke.jpg"),
+        value: Utils3D.getRepeatTexture("/assets/images/noise/brushstroke.jpg"),
         ignoreUIL: !0,
       },
       uBrushBlend: {
@@ -76484,7 +76491,7 @@ Class(function MouseFluid(
         value: 0.1,
       },
       tBrush: {
-        value: Utils3D.getRepeatTexture("assets/images/noise/brushstroke.jpg"),
+        value: Utils3D.getRepeatTexture("/assets/images/noise/brushstroke.jpg"),
         ignoreUIL: !0,
       },
       uBrushBlend: {
@@ -76552,7 +76559,7 @@ Class(function MouseFluid(
         value: 12,
       },
       tBrush: {
-        value: Utils3D.getRepeatTexture("assets/images/noise/brushstroke.jpg"),
+        value: Utils3D.getRepeatTexture("/assets/images/noise/brushstroke.jpg"),
         ignoreUIL: !0,
       },
       uBrushBlend: {
@@ -76683,7 +76690,7 @@ Class(function MouseFluid(
         value: 0.1,
       },
       tBrush: {
-        value: Utils3D.getRepeatTexture("assets/images/noise/brushstroke.jpg"),
+        value: Utils3D.getRepeatTexture("/assets/images/noise/brushstroke.jpg"),
         ignoreUIL: !0,
       },
       uBrushBlend: {
@@ -76756,7 +76763,7 @@ Class(function MouseFluid(
         value: 0.1,
       },
       tBrush: {
-        value: Utils3D.getRepeatTexture("assets/images/noise/brushstroke.jpg"),
+        value: Utils3D.getRepeatTexture("/assets/images/noise/brushstroke.jpg"),
         ignoreUIL: !0,
       },
       uBrushBlend: {
@@ -76786,7 +76793,7 @@ Class(function MouseFluid(
           value: new Color("#c1ffd9"),
         },
         tData: {
-          value: Utils3D.getTexture("assets/images/shipping/water.png"),
+          value: Utils3D.getTexture("/assets/images/shipping/water.png"),
         },
         uMirrorDiffuse: {
           value: new Vector3(1, 1, 1),
@@ -76986,14 +76993,14 @@ Class(function MouseFluid(
     !(async function initMesh() {
       _proton.antimatter.storeVelocity = !0;
       let birdGeometry = await GeomThread.loadGeometry(
-          "assets/geometry/birds/simplebird2.json"
+          "/assets/geometry/birds/simplebird2.json"
         ),
         geom = new Geometry().instanceFrom(birdGeometry);
       _proton.applyToInstancedGeometry(geom);
       let shader = _this.initClass(Shader, "InstancedBirdParticles", {
         tAnimation: {
           value: Utils3D.getLookupTexture(
-            "assets/images/birds/birdanimation.jpg"
+            "/assets/images/birds/birdanimation.jpg"
           ),
         },
         uColor1: {
@@ -78066,7 +78073,7 @@ Class(function MouseFluid(
         value: 0,
       },
       tNoise: {
-        value: Utils3D.getTexture("assets/images/noise/dirnoise3.jpg"),
+        value: Utils3D.getTexture("/assets/images/noise/dirnoise3.jpg"),
         ignoreUIL: !0,
       },
       uTimeScale: {
@@ -78454,7 +78461,7 @@ Class(function MouseFluid(
         value: new Vector2(1, 1),
       },
       tBrush: {
-        value: Utils3D.getRepeatTexture("assets/images/noise/brushstroke.jpg"),
+        value: Utils3D.getRepeatTexture("/assets/images/noise/brushstroke.jpg"),
         ignoreUIL: !0,
       },
       uBrushBlend: {
@@ -78471,7 +78478,7 @@ Class(function MouseFluid(
   Class(function StylizedForgeShader(_mesh, _shader) {
     Inherit(this, Component);
     !(function () {
-      let lookup = Utils3D.getLookupTexture("assets/images/pbr/lut.png");
+      let lookup = Utils3D.getLookupTexture("/assets/images/pbr/lut.png");
       (lookup.forcePersist = !0),
         _shader.addUniforms({
           uTint: {
@@ -78635,7 +78642,7 @@ Class(function MouseFluid(
           },
           tBrush: {
             value: Utils3D.getRepeatTexture(
-              "assets/images/noise/brushstroke.jpg"
+              "/assets/images/noise/brushstroke.jpg"
             ),
             ignoreUIL: !0,
           },
