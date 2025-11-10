@@ -1,12 +1,15 @@
 {
   "version": 2,
+  "functions": {
+    "api/render.js": {
+      "runtime": "nodejs22.x",
+      "includeFiles": "views/**/*.ejs"
+    }
+  },
   "builds": [
-    { "src": "api/render.js", "use": "@vercel/node", "config": { "includeFiles": ["views/**/*.ejs"] } },
-    { "src": "api/index.js",  "use": "@vercel/node" }
+    { "src": "api/render.js", "use": "@vercel/node" }
   ],
-  "routes": [
-    { "src": "^/$",       "dest": "/api/render" },   
-    { "src": "/api/(.*)", "dest": "/api/index.js" }, 
-    { "src": "/(.*)",     "dest": "/public/$1" }     
+  "rewrites": [
+    { "source": "/", "destination": "/api/render" }
   ]
 }
