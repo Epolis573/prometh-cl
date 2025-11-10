@@ -1,12 +1,12 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/render.js", "use": "@vercel/node", "config": { "includeFiles": ["index.ejs", "news.ejs"] } },
+    { "src": "api/render.js", "use": "@vercel/node", "config": { "includeFiles": ["views/**/*.ejs"] } },
     { "src": "api/index.js",  "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "^/$",         "dest": "/api/render" },   
-    { "src": "/api/(.*)",   "dest": "/api/index.js" },
-    { "src": "/(.*)",       "dest": "/public/$1" }
+    { "src": "^/$",       "dest": "/api/render" },   
+    { "src": "/api/(.*)", "dest": "/api/index.js" }, 
+    { "src": "/(.*)",     "dest": "/public/$1" }     
   ]
 }

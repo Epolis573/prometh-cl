@@ -9,8 +9,7 @@ const __dirname = path.dirname(__filename);
 
 export default async function handler(req, res) {
   try {
-    // The bundled template sits next to project root; adjust if yours lives elsewhere
-    const templatePath = path.join(__dirname, "..", "index.ejs");
+    const templatePath = path.join(__dirname, "..", "views", "index.ejs");
     const tpl = await readFile(templatePath, "utf8");
 
     const html = ejs.render(tpl, {
