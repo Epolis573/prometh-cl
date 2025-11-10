@@ -20,12 +20,13 @@
     <meta property="og:title" content="Prometheus Fuels">
     <meta property="og:description"
         content="We remove CO2 from the air and turn it into gasoline and jet fuel. Our fuels are the first zero net carbon fuels that can compete with fossil fuels on price.">
-    <meta property="og:image:type" content="<%= BLOB_BASE_URL %>/public/image/png">
+   <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <link rel="icon" type="<%= BLOB_BASE_URL %>/public/image/png" sizes="32x32" href="<%= BLOB_BASE_URL %>/public/assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="<%= BLOB_BASE_URL %>/public/image/png" sizes="16x16" href="<%= BLOB_BASE_URL %>/public/assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="<%= BLOB_BASE_URL %>/public/assets/favicons/site.webmanifest.txt">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= BLOB_BASE_URL %>/public/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<%= BLOB_BASE_URL %>/public/assets/favicons/favicon-16x16.png">
+   <link rel="manifest" href="<%= BLOB_BASE_URL %>/public/assets/favicons/site.webmanifest">
+
     <link rel="mask-icon" href="<%= BLOB_BASE_URL %>/public/assets/favicons/safari-pinned-tab.svg" color="#E84733">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="theme-color" content="#FFFFFF">
@@ -3562,11 +3563,11 @@
         (function () {
             window._CONFIG_ = { "ENV": "production", "CMS": "<%= BLOB_BASE_URL %>/public/navigations", "newsletterRoot": "/" };
             window._CACHE_ = '1740684676441';
-            window.UIL_STATIC_PATH = '<%= BLOB_BASE_URL %>/public/assets/data/uil.1740684676441-NbfZf36lTNrM75Nq0Elkyh2Jlr58EB.json';
+            window.UIL_STATIC_PATH = '<%= BLOB_BASE_URL %>/public/assets/data/uil.1740684676441.json';
             var p = 'app';
             try { eval('let obj = {}; obj?.prop') } catch (e) { window._ES5_ = true; p = 'es5-' + p; }
             var s = document.createElement('script');
-            s.src = 'public/assets/js/' + p + '.' + window._CACHE_ + '.js';
+            s.src = '<%= BLOB_BASE_URL %>/public/assets/js/' + p + '.' + window._CACHE_ + '.js';
             s.async = true;
             document.head.appendChild(s);
         })();
