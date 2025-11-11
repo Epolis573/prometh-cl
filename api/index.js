@@ -7,10 +7,12 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
+// moved BLOB_BASE to module scope so it's available in app.listen
+const BLOB_BASE = (process.env.BLOB_BASE_URL || "").replace(/\/$/, "");
 
 app.use(async (req, res, next) => {
   try {
-    const BLOB_BASE = (process.env.BLOB_BASE_URL || "").replace(/\/$/, "");
+    // use top-level BLOB_BASE (do NOT redefine here)
     const PROXY_PREFIXES = [
       "/assets/",
       "/images/",
@@ -54,7 +56,6 @@ app.use(async (req, res, next) => {
       console.warn(
         `Blob proxy upstream returned ${upstream.status} for ${target}`
       );
-      // forward upstream status and body (or fallback to next())
       res.status(upstream.status);
       const body = await upstream.text();
       return res.send(body);
@@ -87,7 +88,7 @@ app.get("/render", render);
 
 app.listen(port, () => {
   console.log(
-    `Local server listening: http://localhost:${port} (BLOB_BASE_URL=${
+    `Local server listening: http://localhost:${port} (BLOB_BASE=${
       BLOB_BASE || "not set"
     })`
   );
