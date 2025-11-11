@@ -7,7 +7,6 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
-// moved BLOB_BASE to module scope so it's available in app.listen
 const BLOB_BASE = (process.env.BLOB_BASE_URL || "").replace(/\/$/, "");
 
 app.use(async (req, res, next) => {
@@ -16,6 +15,7 @@ app.use(async (req, res, next) => {
     if (!BLOB_BASE || !PROXY_PREFIXES.some((p) => req.path.startsWith(p)))
       return next();
 
+    // If local file exists (dev fallback), let static serve it
     const localFile = path.resolve(
       process.cwd(),
       "public",
@@ -23,12 +23,13 @@ app.use(async (req, res, next) => {
     );
     if (fs.existsSync(localFile)) return next();
 
-    // candidates for blob location
+    // Try candidate blob locations (with /public prefix first)
     const candidates = [
       `${BLOB_BASE}/public${req.originalUrl}`,
       `${BLOB_BASE}${req.originalUrl}`,
     ];
 
+    // Forward most request headers but drop host/encoding/length
     const forwardHeaders = { ...req.headers };
     delete forwardHeaders.host;
     delete forwardHeaders["accept-encoding"];
@@ -49,7 +50,7 @@ app.use(async (req, res, next) => {
           body: ["GET", "HEAD"].includes(req.method) ? undefined : req,
         });
       } catch (err) {
-        console.warn("Blob proxy fetch error:", err);
+        console.warn(`Blob proxy fetch error for ${cand}:`, err);
         upstream = null;
       }
       if (upstream && upstream.ok) break;
@@ -63,11 +64,12 @@ app.use(async (req, res, next) => {
       return res.send(body);
     }
 
+    // decide textual responses (include various JS content-types)
     const contentType = (
       upstream.headers.get("content-type") || ""
     ).toLowerCase();
     const isText =
-      /^(text\/|application\/(javascript|json|xml)|image\/svg\+xml)/i.test(
+      /^(text\/|application\/(javascript|x-javascript|json|xml)|image\/svg\+xml)/i.test(
         contentType
       );
 
@@ -91,7 +93,8 @@ app.use(async (req, res, next) => {
     if (isText) {
       let text = await upstream.text();
 
-      // rewrite quoted root-relative occurrences to blob public path
+      // rewrite quoted root-relative references like "/assets/...", "/geometry/...", "/shaders/..." etc.
+      // captures: quote, prefix (public|assets|...), tail
       const PREFIXES = [
         "public",
         "assets",
@@ -106,28 +109,27 @@ app.use(async (req, res, next) => {
         "favicons",
       ];
       const re = new RegExp(
-        `(["'\\\`])\\/(?:${PREFIXES.join("|")})\\/([^"'\\\`\\s]*)`,
+        `(["'\\\`])\\/(?:(${PREFIXES.join("|")}))\\/([^"'\\\`\\s]*)`,
         "g"
       );
 
-      text = text.replace(re, (match, quote, rest) => {
-        // rest = "<prefix>/<tail...>"
-        const parts = rest.split("/");
-        const prefix = parts.shift() || "";
-        const tail = parts.join("/");
-        // if already pointing to blob, keep it
-        if (match.includes(BLOB_BASE)) return match;
-        // build blob path: prefer BLOB_BASE/public/<prefix>/<tail> except when prefix === 'public'
+      text = text.replace(re, (full, quote, prefix, tail) => {
+        // if already rewritten to the blob, skip
+        if (full.includes(BLOB_BASE)) return full;
         if (prefix === "public") {
+          // original was /public/..., map to `${BLOB_BASE}/...`
           return `${quote}${BLOB_BASE}/${tail}`;
         }
+        // map /assets/... -> `${BLOB_BASE}/public/assets/...`
         return `${quote}${BLOB_BASE}/public/${prefix}/${tail}`;
       });
 
-      return res.send(text);
+      // send rewritten text
+      res.send(text);
+      return;
     }
 
-    // binary -> stream
+    // binary -> stream unchanged
     if (upstream.body && upstream.body.pipe) {
       upstream.body.pipe(res);
     } else {
