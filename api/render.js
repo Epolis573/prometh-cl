@@ -54,8 +54,73 @@ export default async function handler(req, res) {
       // keep a client shim as fallback (whitelist approach, still excludes /navigations)
       // only inject the runtime shim when explicitly enabled (prevents local crashes)
       if (!process.env.DISABLE_BLOB_SHIM) {
-        const shim = `<base href="${BLOB}/public/">
-<script>(function(){ /* runtime blob rewrite shim (unchanged) */ })();</script>`;
+        const shim = `<script>(function(){
+  try{
+    var BLOB='${BLOB}';
+    if(!BLOB) return;
+    // do not run in local dev
+    if(location.hostname==='localhost' || location.hostname==='127.0.0.1') return;
+    var PREFIXES=['/assets/','/public/','/images/','/geometry/','/shaders/','/css/','/js/','/videos/','/fonts/','/data/','/favicons/'];
+    function shouldRewrite(url){
+      if(typeof url!=='string') return false;
+      if(url.startsWith('http:')||url.startsWith('https:')||url.startsWith('data:')||url.startsWith('blob:')) return false;
+      if(url.startsWith('/navigations/')) return false;
+      return PREFIXES.some(function(p){return url.startsWith(p);});
+    }
+    // patch fetch
+    try{
+      var _fetch = window.fetch && window.fetch.bind(window);
+      if(_fetch){
+        window.fetch = function(input, init){
+          var url = (typeof input === 'string') ? input : (input && input.url);
+          if(shouldRewrite(url)){
+            var full = url.startsWith('/public/') ? (BLOB+url) : (BLOB+'/public'+url);
+            if(typeof input === 'object' && input.url) input = new Request(full, input);
+            else url = full;
+          }
+          return _fetch(url || input, init);
+        };
+      }
+    }catch(e){console.warn('fetch patch', e);}
+    // patch XHR.open
+    try{
+      var XHROpen = XMLHttpRequest.prototype.open;
+      XMLHttpRequest.prototype.open = function(method, url){
+        try{ if(shouldRewrite(url)) url = url.startsWith('/public/') ? (BLOB+url) : (BLOB+'/public'+url); }catch(e){}
+        return XHROpen.apply(this, arguments);
+      };
+    }catch(e){console.warn('xhr patch', e);}
+    // patch element setters and setAttribute for src/href
+    function patchSetter(proto, name){
+      try{
+        var desc = Object.getOwnPropertyDescriptor(proto, name);
+        if(!desc || !desc.set) return;
+        var origSet = desc.set;
+        Object.defineProperty(proto, name, {
+          set: function(v){
+            try{ if(shouldRewrite(v)) v = v.startsWith('/public/') ? (BLOB+v) : (BLOB+'/public'+v); }catch(e){}
+            return origSet.call(this, v);
+          },
+          get: desc.get,
+          configurable: true,
+          enumerable: true
+        });
+      }catch(e){}
+    }
+    patchSetter(HTMLImageElement.prototype,'src');
+    patchSetter(HTMLScriptElement.prototype,'src');
+    patchSetter(HTMLLinkElement.prototype,'href');
+    var origSetAttr = Element.prototype.setAttribute;
+    Element.prototype.setAttribute = function(name, value){
+      try{
+        if((name==='src' || name==='href') && shouldRewrite(value)){
+          value = value.startsWith('/public/') ? (BLOB+value) : (BLOB+'/public'+value);
+        }
+      }catch(e){}
+      return origSetAttr.call(this, name, value);
+    };
+  }catch(e){ console.warn('blob shim init', e); }
+})();</script>`;
         html = html.replace("</head>", shim + "</head>");
       }
     }
