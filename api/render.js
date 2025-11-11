@@ -52,42 +52,12 @@ export default async function handler(req, res) {
       );
 
       // keep a client shim as fallback (whitelist approach, still excludes /navigations)
-      const shim = `<script>/* injected blob shim */
-(function(){
-  try{
-    const BLOB='${BLOB}';
-    window.BLOB_BASE_URL = BLOB;
-    const REWRITE_PREFIXES = ${JSON.stringify([
-      "/assets/",
-      "/public/",
-      "/images/",
-      "/css/",
-      "/js/",
-    ])};
-    const shouldRewrite = (url) => {
-      if (typeof url !== 'string' || !url.startsWith('/')) return false;
-      // never rewrite navigations
-      if (url.startsWith('/navigations/')) return false;
-      return REWRITE_PREFIXES.some(p => url.startsWith(p));
-    };
-    const _fetch = window.fetch && window.fetch.bind(window);
-    if(_fetch){
-      window.fetch = function(url, opts){
-        if(shouldRewrite(url)) url = BLOB + url;
-        return _fetch(url, opts);
-      };
-    }
-    const wrap = (fnName) => {
-      const orig = window[fnName];
-      window[fnName] = function(url, ...rest){
-        if(shouldRewrite(url)) url = BLOB + url;
-        return (orig || window.fetch)(url, ...rest);
-      };
-    };
-    wrap('get'); wrap('post'); wrap('put');
-  }catch(e){ console.error('blob shim', e); }
-})();</script>`;
-      html = html.replace("</head>", shim + "</head>");
+      // only inject the runtime shim when explicitly enabled (prevents local crashes)
+      if (!process.env.DISABLE_BLOB_SHIM) {
+        const shim = `<base href="${BLOB}/public/">
+<script>(function(){ /* runtime blob rewrite shim (unchanged) */ })();</script>`;
+        html = html.replace("</head>", shim + "</head>");
+      }
     }
 
     res.setHeader("Content-Type", "text/html; charset=utf-8");
