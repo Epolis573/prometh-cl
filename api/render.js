@@ -17,7 +17,21 @@ export default async function handler(req, res) {
     const BLOB = (process.env.BLOB_BASE_URL || "").replace(/\/$/, "");
     if (BLOB) {
       // prefixes to rewrite server-side (do NOT include /navigations)
-      const REWRITE_PREFIXES = ["assets/", "public/", "images/", "css/", "js/"];
+      const REWRITE_PREFIXES = [
+        "assets/",
+        "public/",
+        "images/",
+        "css/",
+        "js/",
+        "navigations/",
+        "geometry/",
+        "shaders/",
+        "videos/",
+        "fonts/",
+        "data/",
+        "favicons/",
+        "fonts/",
+      ];
 
       // 1) rewrite src/href attributes like src="/assets/..." href='/images/...'
       html = html.replace(

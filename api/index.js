@@ -20,6 +20,13 @@ app.use(async (req, res, next) => {
       "/css/",
       "/js/",
       "/navigations/",
+      "/geometry/",
+      "/shaders/",
+      "/videos/",
+      "/fonts/",
+      "/data/",
+      "/favicons/",
+      "/fonts/",
     ];
     if (!BLOB_BASE || !PROXY_PREFIXES.some((p) => req.path.startsWith(p)))
       return next();
@@ -39,7 +46,15 @@ app.use(async (req, res, next) => {
       req.path.startsWith("/images/") ||
       req.path.startsWith("/css/") ||
       req.path.startsWith("/js/") ||
-      req.path.startsWith("/navigations/")
+      req.path.startsWith("/navigations/") ||
+      req.path.startsWith("/public/") ||
+      req.path.startsWith("/geometry/") ||
+      req.path.startsWith("/shaders/") ||
+      req.path.startsWith("/videos/") ||
+      req.path.startsWith("/fonts/") ||
+      req.path.startsWith("/data/") ||
+      req.path.startsWith("/favicons/") ||
+      req.path.startsWith("/fonts/")
     ) {
       targetPath = "/public" + req.originalUrl;
     }
