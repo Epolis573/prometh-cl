@@ -4,19 +4,8 @@
     { "src": "^/$", "dest": "/api/render" },
     { "src": "^/render$", "dest": "/api/render" },
 
-    { "src": "^/public/(.*)$", "dest": "/api/index.js" },
     { "src": "^/assets/(.*)$", "dest": "/api/index.js" },
     { "src": "^/images/(.*)$", "dest": "/api/index.js" },
-    { "src": "^/css/(.*)$", "dest": "/api/index.js" },
-    { "src": "^/js/(.*)$", "dest": "/api/index.js" },
-
-    { "src": "^/geometry/(.*)$", "dest": "/api/index.js" },
-    { "src": "^/shaders/(.*)$", "dest": "/api/index.js" },
-    { "src": "^/videos/(.*)$", "dest": "/api/index.js" },
-    { "src": "^/fonts/(.*)$", "dest": "/api/index.js" },
-    { "src": "^/data/(.*)$", "dest": "/api/index.js" },
-    { "src": "^/favicons/(.*)$", "dest": "/api/index.js" },
-
     { "src": "^/navigations/(.*)$", "dest": "/api/index.js" },
 
     { "src": "^/api/(.*)$", "dest": "/api/index.js" },
