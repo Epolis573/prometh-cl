@@ -23,13 +23,12 @@ app.use(async (req, res, next) => {
     );
     if (fs.existsSync(localFile)) return next();
 
-    // try blob targets (with /public prefix and without)
+    // candidates for blob location
     const candidates = [
       `${BLOB_BASE}/public${req.originalUrl}`,
       `${BLOB_BASE}${req.originalUrl}`,
     ];
 
-    // forward headers but drop host and accept-encoding
     const forwardHeaders = { ...req.headers };
     delete forwardHeaders.host;
     delete forwardHeaders["accept-encoding"];
@@ -54,7 +53,6 @@ app.use(async (req, res, next) => {
         upstream = null;
       }
       if (upstream && upstream.ok) break;
-      // if upstream found but not ok and not 404, stop
       if (upstream && upstream.status !== 404) break;
     }
 
@@ -65,7 +63,6 @@ app.use(async (req, res, next) => {
       return res.send(body);
     }
 
-    // determine if textual (JS/CSS/JSON/HTML/SVG)
     const contentType = (
       upstream.headers.get("content-type") || ""
     ).toLowerCase();
@@ -74,7 +71,7 @@ app.use(async (req, res, next) => {
         contentType
       );
 
-    // forward headers but drop encoding/length to avoid decoding mismatch
+    // forward safe headers (drop hop-by-hop & encoding/length)
     upstream.headers.forEach((v, k) => {
       const key = k.toLowerCase();
       if (
@@ -88,15 +85,13 @@ app.use(async (req, res, next) => {
         return;
       res.setHeader(k, v);
     });
-
-    // ensure content-type exists for browsers
     if (!res.getHeader("content-type") && contentType)
       res.setHeader("Content-Type", contentType);
 
     if (isText) {
       let text = await upstream.text();
 
-      // rewrite quoted root-relative references like "/assets/..." "/geometry/..." "/shaders/..." etc.
+      // rewrite quoted root-relative occurrences to blob public path
       const PREFIXES = [
         "public",
         "assets",
@@ -116,27 +111,23 @@ app.use(async (req, res, next) => {
       );
 
       text = text.replace(re, (match, quote, rest) => {
-        // match like '"/assets/..' -> quote = ", rest = assets/...
-        // extract the prefix from rest
+        // rest = "<prefix>/<tail...>"
         const parts = rest.split("/");
-        const prefix = parts.shift();
+        const prefix = parts.shift() || "";
         const tail = parts.join("/");
-        // if original already points to blob, leave it
+        // if already pointing to blob, keep it
         if (match.includes(BLOB_BASE)) return match;
-        // build replacement: ensure we map to BLOB_BASE/public/<prefix>/<tail>
+        // build blob path: prefer BLOB_BASE/public/<prefix>/<tail> except when prefix === 'public'
         if (prefix === "public") {
-          // original was /public/..., keep single /public/
-          return `${quote}${BLOB_BASE}/public/${tail}`;
-        } else {
-          return `${quote}${BLOB_BASE}/public/${prefix}/${tail}`;
+          return `${quote}${BLOB_BASE}/${tail}`;
         }
+        return `${quote}${BLOB_BASE}/public/${prefix}/${tail}`;
       });
 
-      res.send(text);
-      return;
+      return res.send(text);
     }
 
-    // binary -> stream as-is
+    // binary -> stream
     if (upstream.body && upstream.body.pipe) {
       upstream.body.pipe(res);
     } else {
