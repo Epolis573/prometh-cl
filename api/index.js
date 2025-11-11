@@ -72,8 +72,7 @@ app.use(async (req, res, next) => {
 
     // If response is textual, rewrite root-relative asset paths to the blob
     if (isText) {
-      const text = await upstream.text();
-      // only rewrite quoted occurrences to avoid accidental replacements
+      let text = await upstream.text();
       const PREFIXES = [
         "assets",
         "public",
@@ -87,9 +86,16 @@ app.use(async (req, res, next) => {
         "data",
         "favicons",
       ];
-      const re = new RegExp(`(["'\`])\\/(?:${PREFIXES.join("|")})\\/`, "g");
-      const rewritten = text.replace(re, (m, quote) => `${quote}${BLOB_BASE}/`);
-      res.send(rewritten);
+      const re = new RegExp(
+        `(["'\\\`])\\/(?:${PREFIXES.join("|")})([^"'\\\`\\s]*)`,
+        "g"
+      );
+      text = text.replace(re, (match, quote, tail) => {
+        const path = match.slice(1); // strip opening quote
+        if (path.startsWith(`${BLOB_BASE}/`)) return match;
+        return `${quote}${BLOB_BASE}/${tail}`;
+      });
+      res.send(text);
       return;
     }
 
