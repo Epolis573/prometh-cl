@@ -46,24 +46,57 @@ app.use(async (req, res, next) => {
       return res.send(body);
     }
 
+    // Decide whether to stream binary or rewrite text responses
+    const contentType = upstream.headers.get("content-type") || "";
+    const isText =
+      /^(text\/|application\/(javascript|json|xml)|image\/svg\+xml)/i.test(
+        contentType
+      );
+
     res.status(upstream.status);
-    // when forwarding headers, drop hop-by-hop and encoding/length headers
+
+    // forward headers (drop encoding/length)
     upstream.headers.forEach((v, k) => {
       const key = k.toLowerCase();
       if (
         [
           "transfer-encoding",
           "connection",
-          "content-encoding", // remove — upstream body may already be decompressed
-          "content-length", // remove — body length may change when streamed
+          "content-encoding",
+          "content-length",
         ].includes(key)
       )
         return;
       res.setHeader(k, v);
     });
 
-    if (upstream.body && upstream.body.pipe) upstream.body.pipe(res);
-    else {
+    // If response is textual, rewrite root-relative asset paths to the blob
+    if (isText) {
+      const text = await upstream.text();
+      // only rewrite quoted occurrences to avoid accidental replacements
+      const PREFIXES = [
+        "assets",
+        "public",
+        "images",
+        "geometry",
+        "shaders",
+        "css",
+        "js",
+        "videos",
+        "fonts",
+        "data",
+        "favicons",
+      ];
+      const re = new RegExp(`(["'\`])\\/(?:${PREFIXES.join("|")})\\/`, "g");
+      const rewritten = text.replace(re, (m, quote) => `${quote}${BLOB_BASE}/`);
+      res.send(rewritten);
+      return;
+    }
+
+    // Binary: stream as-is
+    if (upstream.body && upstream.body.pipe) {
+      upstream.body.pipe(res);
+    } else {
       const buf = Buffer.from(await upstream.arrayBuffer());
       res.send(buf);
     }
