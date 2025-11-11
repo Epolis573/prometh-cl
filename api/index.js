@@ -12,12 +12,10 @@ const BLOB_BASE = (process.env.BLOB_BASE_URL || "").replace(/\/$/, "");
 
 app.use(async (req, res, next) => {
   try {
-    // only proxy these top-level prefixes; everything else is under /assets
     const PROXY_PREFIXES = ["/assets/", "/images/", "/navigations/"];
     if (!BLOB_BASE || !PROXY_PREFIXES.some((p) => req.path.startsWith(p)))
       return next();
 
-    // prefer local file when present in dev
     const localFile = path.resolve(
       process.cwd(),
       "public",
@@ -25,37 +23,58 @@ app.use(async (req, res, next) => {
     );
     if (fs.existsSync(localFile)) return next();
 
-    // all proxied requests should map to the blob public root
-    // e.g. /assets/...  ->  ${BLOB_BASE}/public/assets/...
-    let targetPath = "/public" + req.originalUrl;
-    const target = BLOB_BASE + targetPath;
-    console.log(`Blob proxy: ${req.method} ${req.originalUrl} -> ${target}`);
+    // try blob targets (with /public prefix and without)
+    const candidates = [
+      `${BLOB_BASE}/public${req.originalUrl}`,
+      `${BLOB_BASE}${req.originalUrl}`,
+    ];
+
+    // forward headers but drop host and accept-encoding
+    const forwardHeaders = { ...req.headers };
+    delete forwardHeaders.host;
+    delete forwardHeaders["accept-encoding"];
+    delete forwardHeaders["content-length"];
 
     const fetchFn = global.fetch ?? (await import("node-fetch")).default;
-    const upstream = await fetchFn(target, {
-      method: req.method,
-      headers: { accept: "*/*" },
-    });
+    let upstream = null;
+    let target = null;
+    for (const cand of candidates) {
+      try {
+        target = cand;
+        console.log(
+          `Blob proxy try: ${req.method} ${req.originalUrl} -> ${target}`
+        );
+        upstream = await fetchFn(target, {
+          method: req.method,
+          headers: forwardHeaders,
+          body: ["GET", "HEAD"].includes(req.method) ? undefined : req,
+        });
+      } catch (err) {
+        console.warn("Blob proxy fetch error:", err);
+        upstream = null;
+      }
+      if (upstream && upstream.ok) break;
+      // if upstream found but not ok and not 404, stop
+      if (upstream && upstream.status !== 404) break;
+    }
 
+    if (!upstream) return next();
     if (!upstream.ok) {
-      console.warn(
-        `Blob proxy upstream returned ${upstream.status} for ${target}`
-      );
       res.status(upstream.status);
-      const body = await upstream.text();
+      const body = await upstream.text().catch(() => "");
       return res.send(body);
     }
 
-    // Decide whether to stream binary or rewrite text responses
-    const contentType = upstream.headers.get("content-type") || "";
+    // determine if textual (JS/CSS/JSON/HTML/SVG)
+    const contentType = (
+      upstream.headers.get("content-type") || ""
+    ).toLowerCase();
     const isText =
       /^(text\/|application\/(javascript|json|xml)|image\/svg\+xml)/i.test(
         contentType
       );
 
-    res.status(upstream.status);
-
-    // forward headers (drop encoding/length)
+    // forward headers but drop encoding/length to avoid decoding mismatch
     upstream.headers.forEach((v, k) => {
       const key = k.toLowerCase();
       if (
@@ -70,12 +89,17 @@ app.use(async (req, res, next) => {
       res.setHeader(k, v);
     });
 
-    // If response is textual, rewrite root-relative asset paths to the blob
+    // ensure content-type exists for browsers
+    if (!res.getHeader("content-type") && contentType)
+      res.setHeader("Content-Type", contentType);
+
     if (isText) {
       let text = await upstream.text();
+
+      // rewrite quoted root-relative references like "/assets/..." "/geometry/..." "/shaders/..." etc.
       const PREFIXES = [
-        "assets",
         "public",
+        "assets",
         "images",
         "geometry",
         "shaders",
@@ -87,19 +111,32 @@ app.use(async (req, res, next) => {
         "favicons",
       ];
       const re = new RegExp(
-        `(["'\\\`])\\/(?:${PREFIXES.join("|")})([^"'\\\`\\s]*)`,
+        `(["'\\\`])\\/(?:${PREFIXES.join("|")})\\/([^"'\\\`\\s]*)`,
         "g"
       );
-      text = text.replace(re, (match, quote, tail) => {
-        const path = match.slice(1); // strip opening quote
-        if (path.startsWith(`${BLOB_BASE}/`)) return match;
-        return `${quote}${BLOB_BASE}/${tail}`;
+
+      text = text.replace(re, (match, quote, rest) => {
+        // match like '"/assets/..' -> quote = ", rest = assets/...
+        // extract the prefix from rest
+        const parts = rest.split("/");
+        const prefix = parts.shift();
+        const tail = parts.join("/");
+        // if original already points to blob, leave it
+        if (match.includes(BLOB_BASE)) return match;
+        // build replacement: ensure we map to BLOB_BASE/public/<prefix>/<tail>
+        if (prefix === "public") {
+          // original was /public/..., keep single /public/
+          return `${quote}${BLOB_BASE}/public/${tail}`;
+        } else {
+          return `${quote}${BLOB_BASE}/public/${prefix}/${tail}`;
+        }
       });
+
       res.send(text);
       return;
     }
 
-    // Binary: stream as-is
+    // binary -> stream as-is
     if (upstream.body && upstream.body.pipe) {
       upstream.body.pipe(res);
     } else {
