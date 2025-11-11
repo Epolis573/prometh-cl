@@ -11,7 +11,12 @@ const BLOB_BASE = (process.env.BLOB_BASE_URL || "").replace(/\/$/, "");
 
 app.use(async (req, res, next) => {
   try {
-    const PROXY_PREFIXES = ["/assets/", "/images/", "/navigations/"];
+    const PROXY_PREFIXES = [
+      "/assets/",
+      "/images/",
+      "/geometry/",
+      "/navigations/",
+    ];
     if (!BLOB_BASE || !PROXY_PREFIXES.some((p) => req.path.startsWith(p)))
       return next();
 
