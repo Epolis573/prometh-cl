@@ -47,9 +47,19 @@ app.use(async (req, res, next) => {
     }
 
     res.status(upstream.status);
+    // when forwarding headers, drop hop-by-hop and encoding/length headers
     upstream.headers.forEach((v, k) => {
-      if (!["transfer-encoding", "connection"].includes(k.toLowerCase()))
-        res.setHeader(k, v);
+      const key = k.toLowerCase();
+      if (
+        [
+          "transfer-encoding",
+          "connection",
+          "content-encoding", // remove — upstream body may already be decompressed
+          "content-length", // remove — body length may change when streamed
+        ].includes(key)
+      )
+        return;
+      res.setHeader(k, v);
     });
 
     if (upstream.body && upstream.body.pipe) upstream.body.pipe(res);
